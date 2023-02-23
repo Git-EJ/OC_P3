@@ -15,17 +15,35 @@
     flex-direction: column;
 }
 
-@mixin flexwrap_nowrap {
-    display:flex;
-    flex-wrap: nowrap;
-}
-
-@mixin flexwrap_wrap {
-    display:flex;
-    flex-wrap: wrap;
-}
-
 @mixin button_hover {
-    background: linear-gradient(170deg, hsla(317, 100%, 74%, 0.9), rgba(146, 86, 220, 0.9));
+    background: linear-gradient(170deg, rgba(255, 122, 217, 0.9), rgba(146, 86, 220, 0.9));  //equivalent lighten sur gradient
     box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.18 );                          
+}
+
+@mixin section_tittle_font {
+    font-size:1.5rem;
+    font-weight: $font_bold;
+}
+
+@mixin heart_icon {
+    scale:1.5; //24*24px
+
+    .fa-solid{
+        display: none;
+    }
+
+    &:hover{
+        .fa-regular {
+            display: none;
+        }
+
+        .fa-solid { //font awesome settings/technology --> Web Fonts
+            display:inline-block; // active le display
+            color:$primary_color;
+            background: $button_and_hover_gradient;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }    
+    }
 }

@@ -19,6 +19,9 @@ body ::-webkit-scrollbar {
   background: rgba(7, 124, 153, 0.6705882353);
 }
 
+/*=======================================================================================*/
+/*======================================= Header =======================================*/
+/*=====================================================================================*/
 header {
   position: sticky;
   top: 1px;
@@ -35,6 +38,15 @@ header .logo_container {
   font-size: 2rem;
 }
 
+/*=======================================================================================*/
+/*======================================= Main =========================================*/
+/*=====================================================================================*/
+/*======================================= Geoloc =======================================*/
+main {
+  /*======================================= Book Menu =======================================*/
+  /*======================================= Functioning =======================================*/
+  /*======================================= Restaurants =======================================*/
+}
 main .geoloc {
   display: flex;
   justify-content: center;
@@ -63,9 +75,9 @@ main .book_menu {
 }
 main .book_menu h1 {
   font-size: 1.5rem;
+  font-weight: 700;
   margin: 0 4rem;
   margin-top: 35px;
-  font-weight: 800;
 }
 main .book_menu h2 {
   margin: 12px 0 32px 0;
@@ -83,7 +95,7 @@ main .book_menu button {
   box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.08);
 }
 main .book_menu button:hover {
-  background: linear-gradient(170deg, hsla(317, 100%, 74%, 0.9), rgba(146, 86, 220, 0.9));
+  background: linear-gradient(170deg, rgba(255, 122, 217, 0.9), rgba(146, 86, 220, 0.9));
   box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.18);
 }
 main .functioning {
@@ -92,7 +104,7 @@ main .functioning {
 }
 main .functioning_title {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 main .functioning_card {
   display: flex;
@@ -155,13 +167,70 @@ main .functioning_card:hover .fa-store {
   -webkit-text-fill-color: transparent;
 }
 main .restaurants {
-  height: 1224px;
+  height: 1225px;
   background: #F7F7F7;
-  padding: 3rem 1rem 0;
+  padding: 3rem 1.2rem 0;
 }
-main .restaurants span {
+main .restaurants_title {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
+}
+main .restaurants .restaurant_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 251px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+main .restaurants .restaurant_card_img {
+  height: 174px;
+  object-fit: cover;
+}
+main .restaurants .restaurant_card_text {
+  width: 100%;
+  height: 77px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  background: #fff;
+}
+main .restaurants .restaurant_card_text_left {
+  width: 82%;
+  margin-left: 1rem;
+}
+main .restaurants .restaurant_card_text_left_title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+main .restaurants .restaurant_card_text_left_location {
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+main .restaurants .restaurant_card_text_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scale: 1.5;
+  width: 20%;
+  height: 100%;
+}
+main .restaurants .restaurant_card_text_right .fa-solid {
+  display: none;
+}
+main .restaurants .restaurant_card_text_right:hover .fa-regular {
+  display: none;
+}
+main .restaurants .restaurant_card_text_right:hover .fa-solid {
+  display: inline-block;
+  color: #9356DC;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */
