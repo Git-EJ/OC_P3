@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+html ::-webkit-scrollbar,
+body ::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper {
+  width: 375px;
+  height: 2263px;
+  margin: 0 auto;
+  background: rgba(7, 124, 153, 0.6705882353);
+}
+
+header {
+  position: sticky;
+  top: 1px;
+  z-index: 1;
+  background: #fff;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
+}
+header .logo_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 63px;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 2rem;
+}
+
+main .geoloc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  color: #353535;
+  background: #EAEAEA;
+}
+main .geoloc .fa-solid,
+main .geoloc .fa-location-dot {
+  padding-right: 16px;
+  shape-rendering: geometricPrecision;
+}
+main .geoloc span {
+  font-weight: 500;
+}
+main .book_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 288px;
+  text-align: center;
+  background: #F7F7F7;
+}
+main .book_menu h1 {
+  font-size: 1.5rem;
+  margin: 0 4rem;
+  margin-top: 35px;
+  font-weight: 800;
+}
+main .book_menu h2 {
+  margin: 12px 0 32px 0;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+main .book_menu button {
+  height: 50px;
+  padding: 0 20px;
+  font-size: 1.05rem;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.08);
+}
+main .book_menu button:hover {
+  background: linear-gradient(170deg, hsla(317, 100%, 74%, 0.9), rgba(146, 86, 220, 0.9));
+  box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.18);
+}
+main .functioning {
+  height: 440px;
+  margin: 3rem 1rem 0;
+}
+main .functioning_title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+main .functioning_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+  height: 73px;
+  width: 323px;
+  margin: 2rem 0 0 1rem;
+  font-weight: 500;
+  background: #F7F7F7;
+  border-radius: 15px;
+  box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.08);
+}
+main .functioning_card_balls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -12px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 400;
+  background: #9356DC;
+  border-radius: 50%;
+}
+main .functioning_card .fa-mobile-screen-button,
+main .functioning_card .fa-list,
+main .functioning_card .fa-store {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 73px;
+  margin-left: 12px;
+  color: #7E7E7E;
+  font-size: 1.2rem;
+  shape-rendering: geometricPrecision;
+}
+main .functioning_card_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  width: 250px;
+}
+main .functioning_card:hover {
+  background: #f5edff;
+}
+main .functioning_card:hover .fa-mobile-screen-button,
+main .functioning_card:hover .fa-list,
+main .functioning_card:hover .fa-store {
+  color: #9356DC;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+main .restaurants {
+  height: 1224px;
+  background: #F7F7F7;
+  padding: 3rem 1rem 0;
+}
+main .restaurants span {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=style.css.map */
