@@ -185,7 +185,8 @@ main .functioning_card .fa-store {
   justify-content: center;
   align-items: center;
   width: 73px;
-  margin-left: 12px; /*(_balls=24px)/2 --> 12px*/
+  margin-left: 12px;
+  /*(_balls=24px)/2 --> 12px*/
   color: #7E7E7E;
   font-size: 1.2rem;
 }
@@ -232,6 +233,7 @@ main .restaurants_cards .restaurant_card {
   flex-direction: column;
   width: 335px;
   height: 251px;
+  position: relative;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.08);
@@ -292,7 +294,22 @@ main .restaurants_cards .restaurant_card_text_right:hover .fa-solid {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block; /*active le display*/
+  display: inline-block;
+  /*active le display*/
+}
+main .restaurants_cards .restaurant_card .new_label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 30px;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  color: #008766;
+  font-size: 0.93rem;
+  font-weight: 500;
+  background: #99E2D0;
 }
 
 /*=======================================================================================*/

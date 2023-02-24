@@ -137,7 +137,8 @@ main {
             .fa-store {
                 @include flex_center;
                 width: 73px;
-                margin-left: 12px;  /*(_balls=24px)/2 --> 12px*/
+                margin-left: 12px;
+                /*(_balls=24px)/2 --> 12px*/
                 color: #7E7E7E;
                 font-size: 1.2rem;
             }
@@ -151,7 +152,8 @@ main {
             &:hover {
                 background: #f5edff;
 
-                .fa-mobile-screen-button, /*font awesome settings/technology --> Web Fonts*/
+                .fa-mobile-screen-button,
+                /*font awesome settings/technology --> Web Fonts*/
                 .fa-list,
                 .fa-store {
                     @include linear_gradient_button_icons;
@@ -179,8 +181,9 @@ main {
 
         .restaurant_card {
             @include flex_center_column;
-            width:335px;
+            width: 335px;
             height: 251px;
+            position: relative;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: $box-shadow ;
@@ -190,15 +193,15 @@ main {
             }
 
             &_image_landscape {
-                width:335px;
-                height:174px;
+                width: 335px;
+                height: 174px;
                 object-fit: cover;
                 object-position: bottom;
             }
 
             &_image_portrait {
-                width:335px;
-                height:174px;
+                width: 335px;
+                height: 174px;
                 object-fit: cover;
                 object-position: 0 62%; //  horiz vert
             }
@@ -231,7 +234,19 @@ main {
                     width: 30%;
                     font-size: 1.5rem;
                 }
+            }
 
+            .new_label {
+                @include flex_center;
+                width: 80px;
+                height: 30px;
+                position: absolute;
+                top: 0.75rem;
+                right: 0.75rem;
+                color: #008766;
+                font-size: 0.93rem;
+                font-weight: $font_half_bold;
+                background: $tertiary_color;
             }
         }
     }
