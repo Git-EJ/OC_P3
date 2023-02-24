@@ -179,6 +179,7 @@ main {
 
         .restaurant_card {
             @include flex_center_column;
+            width:335px;
             height: 251px;
             border-radius: 15px;
             overflow: hidden;
@@ -188,9 +189,18 @@ main {
                 box-shadow: $box-shadow_hover;
             }
 
-            &_img {
-                height: 174px;
+            &_image_landscape {
+                width:335px;
+                height:174px;
                 object-fit: cover;
+                object-position: bottom;
+            }
+
+            &_image_portrait {
+                width:335px;
+                height:174px;
+                object-fit: cover;
+                object-position: 0 62%; //  horiz vert
             }
 
             &_text {

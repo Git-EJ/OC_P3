@@ -1,6 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
-@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend,
+textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
 html,
 body {
   font-family: "Roboto", sans-serif;
@@ -185,6 +230,7 @@ main .restaurants_cards .restaurant_card {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 335px;
   height: 251px;
   border-radius: 15px;
   overflow: hidden;
@@ -193,9 +239,17 @@ main .restaurants_cards .restaurant_card {
 main .restaurants_cards .restaurant_card:hover {
   box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.18);
 }
-main .restaurants_cards .restaurant_card_img {
+main .restaurants_cards .restaurant_card_image_landscape {
+  width: 335px;
   height: 174px;
   object-fit: cover;
+  object-position: bottom;
+}
+main .restaurants_cards .restaurant_card_image_portrait {
+  width: 335px;
+  height: 174px;
+  object-fit: cover;
+  object-position: 0 62%;
 }
 main .restaurants_cards .restaurant_card_text {
   display: flex;
