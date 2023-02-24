@@ -17,7 +17,7 @@
 
 @mixin button_hover {
     background: linear-gradient(170deg, rgba(255, 122, 217, 0.9), rgba(146, 86, 220, 0.9));  //equivalent lighten sur gradient
-    box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.18 );                          
+    box-shadow: $box-shadow_hover;                 
 }
 
 @mixin section_tittle_font {
@@ -25,9 +25,17 @@
     font-weight: $font_bold;
 }
 
-@mixin heart_icon {
-    scale:1.5; //24*24px
 
+@mixin linear_gradient_button_icons{
+    color:$primary_color;
+    background: $button_and_hover_gradient;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+@mixin heart_icon {
     .fa-solid{
         display: none;
     }
@@ -37,13 +45,19 @@
             display: none;
         }
 
-        .fa-solid { //font awesome settings/technology --> Web Fonts
-            display:inline-block; // active le display
-            color:$primary_color;
-            background: $button_and_hover_gradient;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .fa-solid {
+            @include linear_gradient_button_icons;
+            display:inline-block; /*active le display*/
         }    
     }
+}
+
+
+@mixin footer_title{
+    @include flex_center;
+    justify-content: flex-start;
+    height:62px;
+    font-family: $font_logo;
+    font-size: 1.1rem;
+    text-rendering: geometricPrecision;
 }

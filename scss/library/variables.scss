@@ -4,8 +4,14 @@ $tertiary_color: #99E2D0;
 $fff:#fff;
 $light_bg_color: #F7F7F7;
 $footer_bg:#353535;
+
 $button_and_hover_gradient: linear-gradient(170deg, $secondary_color, $primary_color );
-$box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.08);  
+
+$box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.08); 
+$box-shadow_hover: 2px 7px 7px rgba(0, 0, 0, 0.18 );  
+
+
+$font_logo:'Shrikhand', sans-serif;;
 $font_bold: 700;
 $font_half_bold:500;
 $font_light:300;     
