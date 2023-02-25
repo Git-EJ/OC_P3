@@ -46,6 +46,17 @@ td, th {
   padding: 0;
 }
 
+/* =============================== add perso =========================== */
+a {
+  text-decoration: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0;
+  margin: 0;
+  border: 0px solid;
+}
+
 html,
 body {
   font-family: "Roboto", sans-serif;
@@ -241,6 +252,10 @@ main .restaurants_cards .restaurant_card {
 main .restaurants_cards .restaurant_card:hover {
   box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.18);
 }
+main .restaurants_cards .restaurant_card_image_link {
+  width: 335px;
+  height: 174px;
+}
 main .restaurants_cards .restaurant_card_image_landscape {
   width: 335px;
   height: 174px;
@@ -263,7 +278,7 @@ main .restaurants_cards .restaurant_card_text {
   background: #fff;
 }
 main .restaurants_cards .restaurant_card_text_left {
-  width: 70%;
+  width: 75%;
   margin-left: 1rem;
 }
 main .restaurants_cards .restaurant_card_text_left_title {
@@ -279,7 +294,7 @@ main .restaurants_cards .restaurant_card_text_right {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30%;
+  width: 25%;
   font-size: 1.5rem;
 }
 main .restaurants_cards .restaurant_card_text_right .fa-solid {

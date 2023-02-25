@@ -192,6 +192,11 @@ main {
                 box-shadow: $box-shadow_hover;
             }
 
+            &_image_link{
+            width: 335px;
+            height: 174px; 
+            }
+
             &_image_landscape {
                 width: 335px;
                 height: 174px;
@@ -213,7 +218,7 @@ main {
                 background: $fff;
 
                 &_left {
-                    width: 70%;
+                    width: 75%;
                     margin-left: 1rem;
 
                     &_title {
@@ -231,7 +236,7 @@ main {
                 &_right {
                     @include flex_center;
                     @include heart_icon;
-                    width: 30%;
+                    width: 25%;
                     font-size: 1.5rem;
                 }
             }
