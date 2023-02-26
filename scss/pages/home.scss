@@ -1,0 +1,223 @@
+/*=======================================================================================*/
+/*======================================= Main =========================================*/
+/*=====================================================================================*/
+
+
+/*===================================== Geoloc =====================================*/
+
+main {
+
+    .geoloc {
+        @include flex_center;
+        height: 50px;
+        color: #353535;
+        background: #EAEAEA;
+
+        .fa-solid,
+        .fa-location-dot {
+            padding-right: 16px;
+        }
+
+        span {
+            font-weight: $font_half_bold;
+        }
+    }
+
+    /*==================================== Book Menu ===================================*/
+
+    .book_menu {
+        @include flex_center_column;
+        justify-content: flex-start;
+        height: 288px;
+        text-align: center;
+        background: $light_bg_color;
+
+        h1 {
+            @include section_tittle_font;
+            margin: 0 4rem;
+            margin-top: 35px;
+        }
+
+        h2 {
+            margin: 12px 0 32px 0;
+            font-size: 1.1rem;
+            font-weight: $font_light;
+        }
+
+        button {
+            height: 50px;
+            padding: 0 20px;
+            font-size: 1.05rem;
+            color: $fff;
+            border: none;
+            border-radius: 25px;
+            background: $button_and_hover_gradient;
+            box-shadow: $box-shadow;
+
+            &:hover {
+                @include button_hover
+            }
+        }
+    }
+
+    /*======================================= Functioning =======================================*/
+
+    .functioning {
+        height: 440px;
+        margin: 3rem 1rem 0;
+
+        &_title {
+            @include section_tittle_font;
+        }
+
+        &_card {
+            @include flex_center_row;
+            justify-content: space-around;
+            position: relative;
+            height: 73px;
+            width: 323px;
+            margin: 2rem 0 0 1rem;
+            font-weight: $font_half_bold;
+            background: $light_bg_color;
+            border-radius: 15px;
+            box-shadow: $box-shadow ;
+
+
+            &_balls {
+                @include flex_center;
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                left: -12px;
+                color: $fff ;
+                font-size: 0.9rem;
+                font-weight: 400;
+                background: $primary_color;
+                border-radius: 50%;
+            }
+
+            .fa-mobile-screen-button,
+            .fa-list,
+            .fa-store {
+                @include flex_center;
+                width: 73px;
+                margin-left: 12px;
+                /*(_balls=24px)/2 --> 12px*/
+                color: #7E7E7E;
+                font-size: 1.2rem;
+            }
+
+            &_text {
+                @include flex_center;
+                justify-content: flex-start;
+                width: 250px;
+            }
+
+            &:hover {
+                background: #f5edff;
+
+                .fa-mobile-screen-button,
+                /*font awesome settings/technology --> Web Fonts*/
+                .fa-list,
+                .fa-store {
+                    @include linear_gradient_button_icons;
+                }
+            }
+        }
+    }
+
+    /*======================================= Restaurants =======================================*/
+
+    .restaurants {
+        height: 1225px;
+        background: $light_bg_color;
+        padding: 3.5rem 1.2rem 0;
+
+        &_title {
+            @include section_tittle_font;
+            margin: 0 0 1.7rem 0;
+        }
+    }
+
+    .restaurants_cards {
+        @include flex_center_column;
+        gap: 1.1rem 0;
+
+        .restaurant_card {
+            @include flex_center_column;
+            width: 335px;
+            height: 251px;
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: $box-shadow ;
+
+            &:hover {
+                box-shadow: $box-shadow_hover;
+            }
+
+            &_image_link{
+            width: 335px;
+            height: 174px; 
+            }
+
+            &_image_landscape {
+                width: 335px;
+                height: 174px;
+                object-fit: cover;
+                object-position: bottom;
+            }
+
+            &_image_portrait {
+                width: 335px;
+                height: 174px;
+                object-fit: cover;
+                object-position: 0 62%; //  horiz vert
+            }
+
+            &_text {
+                @include flex_center_row;
+                width: 100%;
+                height: 77px;
+                background: $fff;
+
+                &_left {
+                    width: 75%;
+                    margin-left: 1rem;
+
+                    &_title {
+                        padding-bottom: 0.1rem;
+                        font-size: 1.2rem;
+                        font-weight: $font_bold;
+                    }
+
+                    &_location {
+                        font-size: 1.05rem;
+                        font-weight: $font_light;
+                    }
+                }
+
+                &_right {
+                    @include flex_center;
+                    @include heart_icon;
+                    width: 25%;
+                    font-size: 1.5rem;
+                }
+            }
+
+            .new_label {
+                @include flex_center;
+                width: 80px;
+                height: 30px;
+                position: absolute;
+                top: 0.75rem;
+                right: 0.75rem;
+                color: #008766;
+                font-size: 0.93rem;
+                font-weight: $font_half_bold;
+                background: $tertiary_color;
+            }
+        }
+    }
+}
+
