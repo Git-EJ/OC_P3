@@ -61,3 +61,13 @@
     font-size: 1.1rem;
     text-rendering: geometricPrecision;
 }
+
+
+/*=======================================Restaurants Menu=======================================*/
+
+@mixin header_restaurant_menu_image{
+    position:absolute;
+    top:275px;
+    height: 100px;
+    width: 100%;
+}

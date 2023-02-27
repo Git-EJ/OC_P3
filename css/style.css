@@ -57,6 +57,7 @@ a {
   border: 0px solid;
 }
 
+/*=======================================Restaurants Menu=======================================*/
 /*=======================================================================================*/
 /*======================================= Main =========================================*/
 /*=====================================================================================*/
@@ -297,14 +298,102 @@ main .restaurants_cards .restaurant_card .new_label {
 .logo_container_home_link {
   position: absolute;
   left: 22px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #353535;
+}
+
+.header_image {
+  height: 261px;
+}
+.header_image_image {
+  height: 261px;
+  object-fit: cover;
+}
+
+.header_image_text {
+  position: absolute;
+  top: 275px;
+  height: 100px;
+  width: 100%;
+  border-radius: 50px 50px 0 0;
+  background: #F7F7F7;
+}
+.header_image_text_left {
+  position: absolute;
+  top: 275px;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 0.8rem;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.8rem;
+}
+.header_image_text_right {
+  position: absolute;
+  top: 275px;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 2rem;
+  font-size: 1.5rem;
+}
+.header_image_text_right .fa-solid {
+  display: none;
+}
+.header_image_text_right:hover .fa-regular {
+  display: none;
+}
+.header_image_text_right:hover .fa-solid {
+  color: #9356DC;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  /*active le display*/
 }
 
 /*=======================================================================================*/
 /*======================================= Main =========================================*/
 /*=====================================================================================*/
+.menu {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(50px);
+  background: #d4c5c5;
+}
+
+.starter {
+  margin: 0 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.starter_title {
+  font-weight: 300;
+  margin-bottom: 0.2rem;
+}
+.starter_title_underline {
+  border-top: 2px solid #99E2D0;
+  color: transparent;
+  width: 40px;
+}
+
+/*=======================================================================================*/
+/*======================================= Footer =========================================*/
+/*=====================================================================================*/
+.footer_container {
+  transform: translateY(50px);
+}
+
 html,
 body {
   font-family: "Roboto", sans-serif;
@@ -318,14 +407,14 @@ body ::-webkit-scrollbar {
 
 .wrapper {
   width: 375px;
+  height: auto;
   margin: 0 auto;
-  height: 3000px;
-  background: rgba(7, 124, 153, 0.6705882353);
+  background: rgba(153, 7, 7, 0.6705882353);
 }
 
 header {
   position: sticky;
-  top: 0.01px;
+  top: 0px;
   z-index: 1;
   background: #fff;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
