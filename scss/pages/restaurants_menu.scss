@@ -2,6 +2,10 @@
 /*======================================= Header =======================================*/
 /*=====================================================================================*/
 
+.header_restaurants_menu {
+    box-shadow: none; //annule le os-shadow de header
+}
+
 .logo_container_home_link{
     position:absolute;
     left: 22px;
@@ -24,25 +28,28 @@
     @include header_restaurant_menu_image;
     border-radius: 50px 50px 0 0;
     background: $light_bg_color;
-
+    
     &_left{
-       @include header_restaurant_menu_image;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left:0.8rem;
-    font-family: $font_logo;
-    font-size: 1.8rem;
+        @include header_restaurant_menu_image;
+        width:80%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left:0.8rem;
+        font-family: $font_logo;
+        font-size: 1.8rem;
     }
 
     &_right{
-    @include header_restaurant_menu_image;
-    @include heart_icon;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 2rem;
-    font-size: 1.5rem;
+        @include header_restaurant_menu_image;
+        @include heart_icon;
+        width:20%;
+        left:80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 2rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -50,36 +57,7 @@
 /*======================================= Main =========================================*/
 /*=====================================================================================*/
 
-.menu {
-    height:500px; //dev
-    display: flex;
-    flex-direction: column;
-    transform: translateY(50px); // 1/2 .header_image_text
-    background: #d4c5c5;
 
-}
-
-.starter{
-    margin: 0 0.8rem;
-    @include flex_center_column;
-    align-items: flex-start;
-  
-
-
-    &_title{
-        font-weight: $font_light;
-        margin-bottom:0.2rem;
-    }
-    
-
-    &_title_underline{
-         border-top:2px solid $tertiary_color;
-         color: transparent; //if span don't need for hr
-         width:40px;
-        
-    }
-
-}    
 
 
 

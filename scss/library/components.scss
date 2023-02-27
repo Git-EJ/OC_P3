@@ -1,3 +1,6 @@
+
+/*===================================== General =====================================*/
+
 @mixin header_component {
     position: sticky;
     top: 0px;
@@ -40,6 +43,179 @@
             width: 20px;
             margin-right: 0.3rem;
             font-size: 0.7rem;
+        }
+    }
+}
+
+
+/*===================================== restaurants_menu =====================================*/
+
+
+.menu {
+    height:auto; //dev
+    display: flex;
+    flex-direction: column;
+    transform: translateY(50px); // 1/2 .header_image_text
+    background: #d4c5c5; //Dev*
+    background-color: $light_bg_color;
+
+    section:last-of-type {
+        div.card:last-of-type {
+            margin: 0 0 4rem 0;
+        }
+    }
+}
+
+
+.section_menu{
+    @include flex_center_column;
+    align-items: flex-start;
+    margin: 0 0.8rem;
+
+    &_title{
+        font-weight: $font_light;
+        margin-bottom:0.2rem;
+    
+    
+        &_underline{
+            border-top:2px solid $tertiary_color;
+            color: transparent; //if span --> don't need for hr
+            width:40px;
+            margin-bottom: 1rem;;
+        }
+    }
+}    
+
+
+.cards {
+width:100%;
+height:auto;
+display: flex;
+flex-direction: column;
+gap:1rem;
+
+    .card {
+        @include flex_center_column;
+        align-items: flex-start;
+        gap: 0.3rem 0;
+        width:100%;
+        height: 70px;
+        background: $fff;
+        border-radius: 15px;
+        padding: 0.8rem 1rem 0.8rem 0.6rem;
+        box-shadow: $box-shadow;
+
+        &_top_dish_name {
+            font-size: 1.1rem;
+            font-weight: $font_bold;
+        }
+
+        &_bottom{
+            width:100%;
+            display: flex;
+            flex-direction: row;
+    
+            &_side_dish {
+                width:90%;
+                font-size:0.9rem;
+                font-weight: $font_light;
+            }
+
+            &_dish_price{
+                width:10%;
+                font-weight: $font_bold;
+            } 
+        }
+    }
+
+    div.card:last-of-type {
+        margin: 0 0 2.6rem 0;
+    }
+}
+
+
+
+.menu {
+    animation-duration: 1s;
+    animation-name: abracadabra;
+
+    @keyframes abracadabra {
+         
+        from {
+            visibility: hidden;
+        }
+        
+        99%{
+            visibility: hidden;
+        }
+
+        to{
+            display: inherit;
+        }
+    }
+}
+
+
+
+.cards div.card:nth-of-type(1){
+    animation-duration: 1.5s;
+    animation-name: gradual-appearance;
+    
+    @keyframes gradual-appearance {
+        
+        0% {
+            visibility: hidden;
+        }
+
+
+        25% {
+            transform:translateY(10px);
+        }
+
+
+        100%{
+            display: inherit;
+        }
+    }
+}
+
+
+.cards div.card:nth-of-type(2){
+    // animation-delay: 0.5s;
+    animation-duration: 1.5s;
+    animation-name: gradual-appearance;
+    
+    @keyframes gradual-appearance {
+        0% {
+            visibility: hidden;
+        }
+
+        50%{
+            transform:translateY(10px);
+        }
+
+        100%{
+            display: inherit;
+        }
+    }  
+}
+
+.cards div.card:nth-of-type(3){
+    // animation-delay: 1s;
+    animation-duration: 1.5s;
+    animation-name: gradual-appearance;
+    
+    @keyframes gradual-appearance {
+        0% {
+            visibility: hidden;
+        }
+
+        75% {
+            transform:translateY(10px);
+        }
+
+        100%{
+            display: inherit;
         }
     }
 }
