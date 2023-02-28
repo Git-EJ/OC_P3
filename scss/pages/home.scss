@@ -205,13 +205,13 @@ main {
                 }
             }
 
-            .new_label {
+            .new_label {                //!!!span + padding
                 @include flex_center;
                 width: 80px;
                 height: 30px;
                 position: absolute;
                 top: 0.75rem;
-                right: 0.75rem;
+                right: 0.75rem; 
                 color: #008766;
                 font-size: 0.93rem;
                 font-weight: $font_half_bold;

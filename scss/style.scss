@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
+
 @import "./library/reset.scss";
-@import "./library/mixins.scss";
 @import "./library/variables.scss";
+@import "./library/mixins.scss";
 @import "./library/functions.scss";
-@import "./library/components.scss";
+@import "./library/components/general/header.scss";
+@import "./library/components/general/footer.scss";
+@import "./library/components/restaurants_menu/animations.scss";
+@import "./library/components/restaurants_menu/menu.scss";
+@import "./library/components/restaurants_menu/cards.scss";
 @import "./pages/home.scss";
 @import "./pages/restaurants_menu.scss";
+
 
 
 html,
@@ -21,20 +27,17 @@ body {
     }
 }
 
-
 .wrapper {
     width: 375px;
     height: auto;
     margin: 0 auto;
     // height:3000px;             //dev
-    background:#990707ab;     //dev
+    // background:#990707ab;     //dev
 }
-
 
 header {
     @include header_component;
 }
-
 
 footer {
     @include footer_component;

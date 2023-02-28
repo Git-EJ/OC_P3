@@ -39,9 +39,9 @@
         display: none;
     }
 
-    &:hover,  {
+    &:hover  {
         .fa-regular {
-            display: none;
+            display: none; //opacité none //html checkbox selecteur :checked
         }
 
         .fa-solid {
@@ -50,24 +50,4 @@
             /*active le display*/
         }
     }
-}
-
-
-@mixin footer_title {
-    @include flex_center;
-    justify-content: flex-start;
-    height: 62px;
-    font-family: $font_logo;
-    font-size: 1.1rem;
-    text-rendering: geometricPrecision;
-}
-
-
-/*=======================================Restaurants Menu=======================================*/
-
-@mixin header_restaurant_menu_image{
-    position:absolute;
-    top:275px;
-    height: 100px;
-    width: 100%;
 }

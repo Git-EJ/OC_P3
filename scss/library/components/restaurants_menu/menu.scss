@@ -1,0 +1,43 @@
+@mixin header_restaurant_menu_image{
+    position:absolute;
+    top:275px;
+    height: 100px;
+    width: 100%;
+}
+
+
+.menu {
+    height:auto; //dev
+    display: flex;
+    flex-direction: column;
+    transform: translateY(50px); // 1/2 .header_image_text
+    background: #d4c5c5; //Dev*
+    background-color: $light_bg_color;
+
+    section:last-of-type {
+        div.card:last-of-type {
+            margin: 0 0 4rem 0;
+        }
+    }
+}
+
+
+.section_menu{
+    @include flex_center_column;
+    align-items: flex-start;
+    margin: 0 0.8rem;
+
+    &_title{
+        font-weight: $font_light;
+        margin-bottom:0.2rem;
+    
+    
+        &_underline{
+            border-top:2px solid $tertiary_color;
+            color: transparent; //if span --> don't need for hr
+            width:40px;
+            margin-bottom: 1rem;;
+        }
+    }
+}    
+
