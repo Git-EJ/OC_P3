@@ -4,13 +4,20 @@
 
 @import "./library/reset.scss";
 @import "./library/variables.scss";
-@import "./library/mixins.scss";
 @import "./library/functions.scss";
+
+@import "./library/components/general/display.scss";
 @import "./library/components/general/header.scss";
+@import "./library/components/general/heart_icons.scss";
+@import "./library/components/general/gradient_icons.scss";
+@import "./library/components/general/gradient_buttons.scss";
 @import "./library/components/general/footer.scss";
+@import "./library/components/general/font.scss";
+
 @import "./library/components/restaurants_menu/animations.scss";
 @import "./library/components/restaurants_menu/menu.scss";
 @import "./library/components/restaurants_menu/cards.scss";
+
 @import "./pages/home.scss";
 @import "./pages/restaurants_menu.scss";
 

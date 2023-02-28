@@ -44,19 +44,9 @@ main {
             font-weight: $font_light;
         }
 
-        button {
-            height: 50px;
-            padding: 0 20px;
-            font-size: 1.05rem;
-            color: $fff;
-            border: none;
-            border-radius: 25px;
-            background: $button_and_hover_gradient;
-            box-shadow: $box-shadow;
-
-            &:hover {
-                @include button_hover
-            }
+        .book_menu_button {
+            @include gradient_button;
+            width: 60%;
         }
     }
 
@@ -120,7 +110,7 @@ main {
                 /*font awesome settings/technology --> Web Fonts*/
                 .fa-list,
                 .fa-store {
-                    @include linear_gradient_button_icons;
+                    @include linear_gradient_icons;
                 }
             }
         }
@@ -179,7 +169,7 @@ main {
                 @include flex_center_row;
                 width: 100%;
                 height: 77px;
-                background: $fff;
+                background: $restaurant_card_text_bg;
 
                 &_left {
                     width: 75%;

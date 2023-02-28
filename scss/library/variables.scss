@@ -2,16 +2,27 @@ $primary_color: #9356DC;
 $secondary_color: #FF79DA;
 $tertiary_color: #99E2D0;
 $fff: #fff;
+
+
+$buttons_font_color: #fff;
+$footer_font_color: #fff;
+
+$header_bg: #fff;
+$restaurant_card_text_bg: #fff;
+$menu_card_bg: #fff;
 $light_bg_color: #F7F7F7;
 $footer_bg: #353535;
 
+
 $button_and_hover_gradient: linear-gradient(170deg, $secondary_color, $primary_color );
+
 
 $box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.08);
 $box-shadow_hover: 2px 7px 7px rgba(0, 0, 0, 0.18);
 
 
 $font_logo: 'Shrikhand', sans-serif;
+
 
 $font_bold: 700;
 $font_half_bold: 500;

@@ -1,0 +1,20 @@
+@mixin button_hover {
+    background: linear-gradient(170deg, rgba(255, 122, 217, 0.9), rgba(146, 86, 220, 0.9)); //equivalent lighten sur gradient
+    box-shadow: $box-shadow_hover;
+}
+
+
+@mixin gradient_button{
+    height: 50px;
+    padding: 0 20px;
+    font-size: 1.05rem;
+    color: $buttons_font_color;
+    border-radius: 25px;
+    background: $button_and_hover_gradient;
+    box-shadow: $box-shadow;
+
+    &:hover {
+        @include button_hover
+    }
+}
+

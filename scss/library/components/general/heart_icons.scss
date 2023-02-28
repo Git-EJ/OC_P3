@@ -1,0 +1,17 @@
+@mixin heart_icon {
+    .fa-solid {
+        display: none;
+    }
+
+    &:hover  {
+        .fa-regular {
+            display: none; //opacité none //html checkbox selecteur :checked
+        }
+
+        .fa-solid {
+            @include linear_gradient_icons;
+            display: inline-block;
+            /*active le display*/
+        }
+    }
+}

@@ -14,7 +14,7 @@
     height: 197px;
     padding: 0 1.2rem;
     background: $footer_bg;
-    color: $fff;
+    color: $footer_font_color;
 
     .footer_title {
         @include footer_title;
