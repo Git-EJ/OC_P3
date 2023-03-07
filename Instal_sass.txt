@@ -1,0 +1,9 @@
+npm init -->creer le fichier package.json
+
+npm i sass --> instal sass
+
+
+Dans le package.json "scripts" -->     "sass": "sass --watch <chemin fichier .scss principal>:<fichier.css>"
+
+npm run sass --> pour lancer le watcher (script ci-dessus)
+

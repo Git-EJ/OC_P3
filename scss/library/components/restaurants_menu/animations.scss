@@ -1,81 +1,63 @@
-// .menu {
-//     animation-duration: 1s;
-//     animation-name: abracadabra;
-
-//     @keyframes abracadabra {
-         
-//         from {
-//             visibility: hidden;
-//         }
-        
-//         99%{
-//             visibility: hidden;
-//         }
-
-//         to{
-//             display: inherit;
-//         }
-//     }
-// }
-
-
-
-.cards div.card:nth-of-type(1){
-    animation-delay: 0.5s;
+@mixin menu_card_animation{
     animation-duration: 1s;
-    animation-name: gradual-appearance;
-    opacity:0;
     animation-fill-mode: forwards;
+    animation-name: gradual-appearance;
+    opacity: 0;
+    
     @keyframes gradual-appearance {
-        
         0% {
             opacity: 0;
-            transform:translateY(20px);
+            transform: translateY(20px);
         }
+        
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+}
+  
 
-        100%{
-            opacity:1;
-            transform:translateY(0px);
-        }
+$card:4;
+
+@for $i from 1 through $card { 
+    .card:nth-of-type(#{$i}) {
+        @include menu_card_animation;
+        animation-delay: 0.5s * $i + 0.5s;
     }
 }
 
 
-.cards div.card:nth-of-type(2){
-    animation-delay: 1s;
-    animation-duration: 1s;
-    animation-name: gradual-appearance;
-    opacity:0;
+
+
+@mixin heart_icon_animation{
+    animation-duration: 3s;
     animation-fill-mode: forwards;
-    @keyframes gradual-appearance {
+    animation-name: opacity-appearance;
+    opacity: 0;
+    transform-style: preserve-3d;
+    
+    @keyframes opacity-appearance {
         0% {
             opacity: 0;
-            transform:translateY(20px);
+            transform: rotateY(0deg);   
         }
 
-        100%{
-            opacity:1;
-            transform:translateY(00px);
+        25%{
+            transform: scale3d(1.5, 1.5, 1.5);
         }
-    }  
-}
 
-.cards div.card:nth-of-type(3){
-    animation-delay: 1.5s;
-    animation-duration: 1s;
-    animation-name: gradual-appearance;
-    opacity:0;
-    animation-fill-mode: forwards;
-    @keyframes gradual-appearance {
-        0% {
-            opacity: 0;
-            transform:translateY(20px);
+        50%{
+            transform: scale3d(1, 1, 1) rotateY(180deg); 
         }
         
-        100%{
-            opacity:1;
-            transform:translateY(0px);
+        75%{
+            transform: scale3d(1.5, 1.5, 1.5);
         }
-        
+
+        100% {
+            opacity: 1;
+        }
     }
 }
+   

@@ -10,8 +10,16 @@
 
         .fa-solid {
             @include linear_gradient_icons;
+            @include heart_icon_animation;
             display: inline-block;
             /*active le display*/
         }
     }
+
+    
 }
+
+
+// :checked {
+//         background: $button_and_hover_gradient;
+//     }

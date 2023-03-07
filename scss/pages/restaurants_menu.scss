@@ -7,49 +7,23 @@
 }
 
 .logo_container_home_link{
-    position:absolute;
+    position: absolute;
     left: 22px;
-    font-size: 1.2rem;
+    font-size:1.3rem;
     font-weight: $font_bold;
-    color:#353535;;
+    color:#353535; 
 }
 
 .header_image{
-    height:261px;
+    @include flex_center; //Remove the overflow of the image
+    height:261px;;
+    position:sticky;
+    top: $header_height;
 
     &_image{
-        width:100%;
+        width:99.9%; //remove the overflow of the image
         height:261px; 
         object-fit: cover;    
-    }
-}
-
-.header_image_text{
-    @include header_restaurant_menu_image;
-    border-radius: 50px 50px 0 0;
-    background: $light_bg_color;
-    
-    &_left{
-        @include header_restaurant_menu_image;
-        width:80%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding-left:0.8rem;
-        font-family: $font_logo;
-        font-size: 1.8rem;
-    }
-
-    &_right{
-        @include header_restaurant_menu_image;
-        @include heart_icon;
-        width:20%;
-        left:80%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-right: 2rem;
-        font-size: 1.5rem;
     }
 }
 
@@ -57,20 +31,43 @@
 /*======================================= Main =========================================*/
 /*=====================================================================================*/
 
+.menu_restaurants_name{
+    @include flex_center;
+    width:100%;
+    height: 100px;
+    padding:0 0.8rem;
+    transform: translateY($menu_restaurants_name_negative_radius_size);
+    background: $light_bg_color;
+    border-radius:$menu_restaurants_name_radius_size $menu_restaurants_name_radius_size 0 0 ;
+    position: sticky;
+    top: calc($header_height - $menu_restaurants_name_negative_radius_size);
+    z-index: 3;
+ 
+    &_text{
+        width:80%;
+        font-family: $font_logo;
+        font-size: 1.8rem; 
+    }
 
-
-
-
-
-
-
-/*=======================================================================================*/
-/*======================================= Footer =========================================*/
-/*=====================================================================================*/
-
-.footer_container{
-    transform: translateY(50px); // 1/2 .header_image_text
+    &_heart_icon{
+        @include flex_center;
+        @include heart_icon;
+        width:20%; 
+        font-size: 1.5rem;
+    }   
 }
+
+.cancel_menu_restaurants_name_radius{
+    background: $light_bg_color;
+    width: 100%;
+    height: $menu_restaurants_name_radius_size;
+    transform: translateY(calc($menu_restaurants_name_negative_radius_size * 2));
+    position: sticky;
+    top: calc($header_height + ($menu_restaurants_name_radius_size * 2));
+    z-index: 2;
+}
+
+
 
 
 

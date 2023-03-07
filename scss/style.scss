@@ -4,7 +4,6 @@
 
 @import "./library/reset.scss";
 @import "./library/variables.scss";
-@import "./library/functions.scss";
 
 @import "./library/components/general/display.scss";
 @import "./library/components/general/header.scss";
@@ -17,6 +16,7 @@
 @import "./library/components/restaurants_menu/animations.scss";
 @import "./library/components/restaurants_menu/menu.scss";
 @import "./library/components/restaurants_menu/cards.scss";
+@import "./library/components/restaurants_menu/functions.scss";
 
 @import "./pages/home.scss";
 @import "./pages/restaurants_menu.scss";
@@ -26,20 +26,18 @@
 html,
 body {
     font-family: 'Roboto', sans-serif;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    // -ms-overflow-style: none;
+    // scrollbar-width: none;
 
-    ::-webkit-scrollbar {
-        display: none;
-    }
+    // ::-webkit-scrollbar {
+    //     display: none;
+    // }
 }
 
 .wrapper {
     width: 375px;
-    height: auto;
     margin: 0 auto;
-    // height:3000px;             //dev
-    // background:#990707ab;     //dev
+    background: $wrapper_bg;
 }
 
 header {
