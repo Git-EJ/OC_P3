@@ -79,7 +79,7 @@ main {
                 height: 24px;
                 position: absolute;
                 left: -12px;
-                color: $fff ;
+                color: $balls_font_color ;
                 font-size: 0.9rem;
                 font-weight: 400;
                 background: $primary_color;
@@ -118,7 +118,7 @@ main {
 
     /*======================================= Restaurants =======================================*/
 
-    .restaurants {
+    .restaurants_home {
         height: 1225px;
         background: $light_bg_color;
         padding: 3.5rem 1.2rem 0;
@@ -129,11 +129,11 @@ main {
         }
     }
 
-    .restaurants_cards {
+    .restaurants_home_cards {
         @include flex_center_column;
         gap: 1.1rem 0;
 
-        .restaurant_card {
+        .restaurant_home_card {
             @include flex_center_column;
             width: 335px;
             height: 251px;
@@ -195,11 +195,11 @@ main {
                 }
             }
 
-            .new_label {                //!!!span + padding
+            .new_label {
                 @include flex_center;
-                width: 80px;
                 height: 30px;
                 position: absolute;
+                padding: 0.7rem;
                 top: 0.75rem;
                 right: 0.75rem; 
                 color: #008766;

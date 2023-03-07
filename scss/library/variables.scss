@@ -1,13 +1,14 @@
 $primary_color: #9356DC;
 $secondary_color: #FF79DA;
 $tertiary_color: #99E2D0;
-$fff: #fff;
-
 
 $buttons_font_color: #fff;
 $footer_font_color: #fff;
 
+
+$wrapper_bg:#fff;
 $header_bg: #fff;
+$balls_font_color: #fff;
 $restaurant_card_text_bg: #fff;
 $menu_card_bg: #fff;
 $light_bg_color: #F7F7F7;
@@ -27,3 +28,7 @@ $font_logo: 'Shrikhand', sans-serif;
 $font_bold: 700;
 $font_half_bold: 500;
 $font_light: 300;
+
+$header_height: 63px;
+$menu_restaurants_name_radius_size: 40px;
+$menu_restaurants_name_negative_radius_size: calc(-1 * $menu_restaurants_name_radius_size);
