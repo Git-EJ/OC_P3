@@ -15,12 +15,8 @@
 }
 
 .header_image{
-<<<<<<< HEAD
     @include flex_center; //Remove the overflow of the image
     height:261px;;
-=======
-    height:261px;
->>>>>>> 5719c74f4e0eaf09c8b82c890aa9ea3cdb414f38
     position:sticky;
     top: $header_height;
 
