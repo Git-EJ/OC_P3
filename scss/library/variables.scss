@@ -3,23 +3,26 @@ $secondary_color: #FF79DA;
 $tertiary_color: #99E2D0;
 
 $buttons_font_color: #fff;
+$balls_font_color: #fff;
 $footer_font_color: #fff;
+
+$shadow_color: #000;
 
 
 $wrapper_bg:#fff;
 $header_bg: #fff;
-$balls_font_color: #fff;
 $restaurant_card_text_bg: #fff;
 $menu_card_bg: #fff;
 $light_bg_color: #F7F7F7;
 $footer_bg: #353535;
 
 
-$button_and_hover_gradient: linear-gradient(170deg, $secondary_color, $primary_color );
+$button_bg_gradient: linear-gradient(170deg, $secondary_color, $primary_color);
+$button_bg_gradient_hover: linear-gradient(170deg, lighten($secondary_color, 5%), lighten($primary_color,5%));
 
-
-$box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.08);
-$box-shadow_hover: 2px 7px 7px rgba(0, 0, 0, 0.18);
+$box-shadow: 2px 7px 7px rgba($shadow_color, 0.08);
+$box-shadow_hover: 2px 7px 7px  rgba($shadow_color, 0.18);
+$box-shadow_gradient: 0 0 14px rgba($secondary_color, 0.705), 7px 7px 7px rgba($primary_color, 0.267);
 
 
 $font_logo: 'Shrikhand', sans-serif;

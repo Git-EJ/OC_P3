@@ -16,6 +16,10 @@
         border-radius: 15px;
         box-shadow: $box-shadow;
 
+        &:hover{
+            box-shadow: $box-shadow_gradient;
+        }
+
         &_top_dish_name {
             font-size: 1.1rem;
             font-weight: $font_bold;

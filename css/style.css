@@ -183,7 +183,7 @@ hr, button {
   padding: 0 0.8rem;
 }
 .order_button:hover {
-  background: linear-gradient(170deg, rgba(255, 122, 217, 0.9), rgba(146, 86, 220, 0.9));
+  background: linear-gradient(170deg, #ff93e1, #a16be0);
   box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.18);
 }
 
@@ -207,6 +207,9 @@ hr, button {
   background: #fff;
   border-radius: 15px;
   box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.08);
+}
+.cards .card:hover {
+  box-shadow: 0 0 14px rgba(255, 121, 218, 0.705), 7px 7px 7px rgba(147, 86, 220, 0.267);
 }
 .cards .card_top_dish_name {
   font-size: 1.1rem;
@@ -358,7 +361,7 @@ main .book_menu .book_menu_button {
   width: 60%;
 }
 main .book_menu .book_menu_button:hover {
-  background: linear-gradient(170deg, rgba(255, 122, 217, 0.9), rgba(146, 86, 220, 0.9));
+  background: linear-gradient(170deg, #ff93e1, #a16be0);
   box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.18);
 }
 main .functioning {
@@ -551,7 +554,7 @@ main .restaurants_home_cards .restaurant_home_card .new_label {
   color: #353535;
 }
 
-.header_image {
+.menu_image {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -559,10 +562,13 @@ main .restaurants_home_cards .restaurant_home_card .new_label {
   position: sticky;
   top: 63px;
 }
-.header_image_image {
+.menu_image_landscape {
   width: 99.9%;
   height: 261px;
   object-fit: cover;
+}
+.menu_image_portrait {
+  image-rendering: optimizeQuality;
 }
 
 /*=======================================================================================*/
