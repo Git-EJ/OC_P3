@@ -1,0 +1,8 @@
+$card:4;
+
+@for $i from 1 through $card { 
+    .card:nth-of-type(#{$i}) {
+        @include menu_card_animation;
+        animation-delay: 0.5s * $i + 0.5s;
+    }
+}

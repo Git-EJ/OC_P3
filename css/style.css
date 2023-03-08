@@ -61,76 +61,70 @@ hr, button {
   border: none;
 }
 
-.card:nth-of-type(1) {
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-name: gradual-appearance;
-  opacity: 0;
-  animation-delay: 1s;
+.restaurant_home_card_text_right input[type=checkbox],
+.restaurant_home_card_text_right .checked,
+.menu_restaurants_name_heart_icon input[type=checkbox],
+.menu_restaurants_name_heart_icont .checked {
+  display: none;
 }
-@keyframes gradual-appearance {
+
+.restaurant_home_card_text_right input[type=checkbox]:checked ~ .checked,
+.menu_restaurants_name_heart_icon input[type=checkbox]:checked ~ .checked {
+  display: inline-block;
+  color: #9356DC;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-name: opacity-appearance;
+  animation-fill-mode: forwards;
+  animation-duration: 2.5s;
+  animation-timing-function: cubic-bezier(0.17, 0.62, 0.44, 0.89);
+  transform-style: preserve-3d;
+}
+@keyframes opacity-appearance {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+  }
+  20% {
+    transform: scale3d(1.5, 1.5, 1.5);
+  }
+  40% {
+    transform: scale3d(1, 1, 1);
+  }
+  60% {
+    transform: scale3d(1.5, 1.5, 1.5);
+  }
+  80% {
+    transform: scale3d(1, 1, 1);
   }
   100% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: scale3d(1.5, 1.5, 1.5);
   }
 }
 
-.card:nth-of-type(2) {
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-name: gradual-appearance;
-  opacity: 0;
-  animation-delay: 1.5s;
+.restaurant_home_card_text_right input[type=checkbox]:checked ~ .unchecked,
+.menu_restaurants_name_heart_icon input[type=checkbox]:checked ~ .unchecked {
+  display: none;
 }
-@keyframes gradual-appearance {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
+.restaurant_home_card_text_right input[type=checkbox]:checked ~ .unchecked .fa-solid,
+.menu_restaurants_name_heart_icon input[type=checkbox]:checked ~ .unchecked .fa-solid {
+  display: none;
 }
-
-.card:nth-of-type(3) {
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-name: gradual-appearance;
-  opacity: 0;
-  animation-delay: 2s;
+.restaurant_home_card_text_right input[type=checkbox]:checked ~ .unchecked:hover .fa-regular,
+.menu_restaurants_name_heart_icon input[type=checkbox]:checked ~ .unchecked:hover .fa-regular {
+  display: none;
 }
-@keyframes gradual-appearance {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-.card:nth-of-type(4) {
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-name: gradual-appearance;
-  opacity: 0;
-  animation-delay: 2.5s;
-}
-@keyframes gradual-appearance {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
+.restaurant_home_card_text_right input[type=checkbox]:checked ~ .unchecked:hover .fa-solid,
+.menu_restaurants_name_heart_icon input[type=checkbox]:checked ~ .unchecked:hover .fa-solid {
+  color: #9356DC;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  /*active le display*/
 }
 
 /*=======================================================================================*/
@@ -234,6 +228,78 @@ hr, button {
 }
 .cards div.card:last-of-type {
   margin: 0 0 2rem 0;
+}
+
+.card:nth-of-type(1) {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: gradual-appearance;
+  opacity: 0;
+  animation-delay: 1s;
+}
+@keyframes gradual-appearance {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.card:nth-of-type(2) {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: gradual-appearance;
+  opacity: 0;
+  animation-delay: 1.5s;
+}
+@keyframes gradual-appearance {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.card:nth-of-type(3) {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: gradual-appearance;
+  opacity: 0;
+  animation-delay: 2s;
+}
+@keyframes gradual-appearance {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.card:nth-of-type(4) {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: gradual-appearance;
+  opacity: 0;
+  animation-delay: 2.5s;
+}
+@keyframes gradual-appearance {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 /*=======================================================================================*/
@@ -452,31 +518,8 @@ main .restaurants_home_cards .restaurant_home_card_text_right:hover .fa-solid {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  animation-name: opacity-appearance;
-  opacity: 0;
-  transform-style: preserve-3d;
   display: inline-block;
   /*active le display*/
-}
-@keyframes opacity-appearance {
-  0% {
-    opacity: 0;
-    transform: rotateY(0deg);
-  }
-  25% {
-    transform: scale3d(1.5, 1.5, 1.5);
-  }
-  50% {
-    transform: scale3d(1, 1, 1) rotateY(180deg);
-  }
-  75% {
-    transform: scale3d(1.5, 1.5, 1.5);
-  }
-  100% {
-    opacity: 1;
-  }
 }
 main .restaurants_home_cards .restaurant_home_card .new_label {
   display: flex;
@@ -563,31 +606,8 @@ main .restaurants_home_cards .restaurant_home_card .new_label {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  animation-name: opacity-appearance;
-  opacity: 0;
-  transform-style: preserve-3d;
   display: inline-block;
   /*active le display*/
-}
-@keyframes opacity-appearance {
-  0% {
-    opacity: 0;
-    transform: rotateY(0deg);
-  }
-  25% {
-    transform: scale3d(1.5, 1.5, 1.5);
-  }
-  50% {
-    transform: scale3d(1, 1, 1) rotateY(180deg);
-  }
-  75% {
-    transform: scale3d(1.5, 1.5, 1.5);
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .cancel_menu_restaurants_name_radius {

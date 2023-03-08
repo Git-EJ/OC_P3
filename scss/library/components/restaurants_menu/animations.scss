@@ -18,45 +18,37 @@
 }
   
 
-$card:4;
-
-@for $i from 1 through $card { 
-    .card:nth-of-type(#{$i}) {
-        @include menu_card_animation;
-        animation-delay: 0.5s * $i + 0.5s;
-    }
-}
-
-
-
-
 @mixin heart_icon_animation{
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
     animation-name: opacity-appearance;
-    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-duration: 2.5s;
+    animation-timing-function: cubic-bezier(.17,.62,.44,.89);
     transform-style: preserve-3d;
     
     @keyframes opacity-appearance {
         0% {
             opacity: 0;
-            transform: rotateY(0deg);   
-        }
-
-        25%{
-            transform: scale3d(1.5, 1.5, 1.5);
-        }
-
-        50%{
-            transform: scale3d(1, 1, 1) rotateY(180deg); 
         }
         
-        75%{
-            transform: scale3d(1.5, 1.5, 1.5);
+        20%{
+            transform: scale3d(1.5, 1.5, 1.5)
+        }
+        
+        40%{
+            transform: scale3d(1, 1, 1); 
+        }
+        
+        60%{
+            transform: scale3d(1.5, 1.5, 1.5)
+        }
+
+        80%{
+            transform: scale3d(1, 1, 1); 
         }
 
         100% {
             opacity: 1;
+            transform: scale3d(1.5, 1.5, 1.5); //at the end of animation a little translation for center position appear???? 
         }
     }
 }
