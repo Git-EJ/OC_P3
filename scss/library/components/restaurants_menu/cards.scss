@@ -6,7 +6,7 @@
     gap:1rem;
 
 
-    label{
+    .menu_card_label{
         width:100%;
         height: $menu_card_height;
     }
@@ -110,12 +110,12 @@
 
 
     .dish_choice_container{
+        @include flex_center;
         position:absolute;
         width:100px;
         height:$menu_card_height;
         right:-100px;
         background: $tertiary_color;
-        @include flex_center;
         transition: transform $menu_card_anim_duration $menu_card_anim_cubic_bezier; 
 
 

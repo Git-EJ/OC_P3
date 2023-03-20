@@ -7,7 +7,7 @@
     @keyframes gradual-appearance {
         0% {
             opacity: 0;
-            transform: translateY(20px);
+            transform: translateY(30px);
         }
         
         100% {
@@ -25,25 +25,15 @@
     animation-timing-function: cubic-bezier(.17,.62,.44,.89);
     
     @keyframes opacity-appearance {
-        0% {
-            opacity: 0;
-        }
+        0% {opacity: 0}
         
-        20%{
-            transform: scale(1.5, 1.5)
-        }
+        20% {transform: scale(1.5, 1.5)}
         
-        40%{
-            transform: scale(1, 1); 
-        }
+        40% {transform: scale(1, 1)}
         
-        60%{
-            transform: scale(1.5, 1.5)
-        }
+        60% {transform: scale(1.5, 1.5)}
 
-        80%{
-            transform: scale(1, 1); 
-        }
+        80% {transform: scale(1, 1)}
 
         100% {
             opacity: 1;
@@ -59,21 +49,13 @@
   
     @keyframes card_checked {
 
-        0%{
-            transform: translateY(0px) rotateY(0);
-        }
+        0% {transform: translateY(0px) rotateY(0)}
 
-        10%{
-            transform: translateY(10px) rotateY(0) ;
-        }
+        10% {transform: translateY(10px) rotateY(0)}
 
-        40%{
-            transform: translateY(-45px) rotateY(1080deg);
-        }
+        40% {transform: translateY(-45px) rotateY(1080deg)}
 
-        50%{
-            transform: translateY(0px);
-        }
+        50% {transform: translateY(0px)}
 
         51%{
             font-size: 1.9rem;
@@ -85,4 +67,20 @@
             transform: scale(1);
         }
     }
+}
+
+
+
+@mixin new_label_shake {
+    animation: new_label_shaking 1s infinite;
+
+    @keyframes new_label_shaking {
+        0% { transform: translateX(0) }
+        25% { transform: translateY(-3px) }
+        35% { transform: translateY(-3px) rotate(7deg) }
+        55% { transform: translateY(-3px) rotate(-7deg) }
+        65% { transform: translateY(-3px) rotate(7deg) }
+        75% { transform: translateY(-3px) rotate(-7deg) }
+        100% { transform: translateY(0) rotate(0) }
+      }
 }

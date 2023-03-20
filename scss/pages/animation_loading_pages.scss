@@ -1,0 +1,9 @@
+@mixin pages_display_timeout{
+    animation: pages_display_timeout 3s;
+
+    @keyframes pages_display_timeout{
+
+        0%{opacity:0}
+        100%{opacity: 100%}
+    }
+}

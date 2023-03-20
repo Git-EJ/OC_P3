@@ -46,7 +46,6 @@ main {
 
         .book_menu_button {
             @include gradient_button;
-            width: 60%;
         }
     }
 
@@ -152,19 +151,20 @@ main {
                
             }   
 
-                &.image {
-                    width: 335px;
-                    height: 174px;
-                    object-fit: cover;
-                
-                    &.landscape {
-                        object-position: bottom;
-                    }
-
-                    &.portrait {
-                        object-position: 0 62%; //  horiz vert
-                    }
+            &.image {
+                width: 335px;
+                height: 174px;
+                object-fit: cover;
+                border-radius:15px 15px 0 0; 
+            
+                &.landscape {
+                    object-position: bottom;
                 }
+
+                &.portrait {
+                    object-position: 0 62%; //  horiz vert
+                }
+            }
 
             &_text {
                 @include flex_center_row;
@@ -197,10 +197,11 @@ main {
             }
 
             .new_label {
+                @include new_label_shake;
                 @include flex_center;
                 height: 30px;
                 position: absolute;
-                padding: 0.7rem;
+                padding: 0.4rem;
                 top: 0.75rem;
                 right: 0.75rem; 
                 color: #008766;
