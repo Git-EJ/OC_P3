@@ -23,7 +23,6 @@
     animation-fill-mode: forwards;
     animation-duration: 2.5s;
     animation-timing-function: cubic-bezier(.17,.62,.44,.89);
-    transform-style: preserve-3d;
     
     @keyframes opacity-appearance {
         0% {
@@ -31,24 +30,24 @@
         }
         
         20%{
-            transform: scale3d(1.5, 1.5, 1.5)
+            transform: scale(1.5, 1.5)
         }
         
         40%{
-            transform: scale3d(1, 1, 1); 
+            transform: scale(1, 1); 
         }
         
         60%{
-            transform: scale3d(1.5, 1.5, 1.5)
+            transform: scale(1.5, 1.5)
         }
 
         80%{
-            transform: scale3d(1, 1, 1); 
+            transform: scale(1, 1); 
         }
 
         100% {
             opacity: 1;
-            transform: scale3d(1.5, 1.5, 1.5); //at the end of animation a little translation for center position appear???? 
+            transform: scale(1.5, 1.5);
         }
     }
 }

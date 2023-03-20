@@ -12,9 +12,12 @@
     border-radius: 25px;
     background: $button_bg_gradient;
     box-shadow: $box-shadow;
-
+    z-index: 1; //without top cut by the .cards div
+    transition: transform 0.5s cubic-bezier(0.2, 0.5, 0.3, 2);
+    
     &:hover {
-        @include button_hover
+        @include button_hover;
+        transform:scale(1.2);
     }
 }
 

@@ -146,24 +146,25 @@ main {
                 box-shadow: $box-shadow_hover;
             }
 
-            &_image_link{
-            width: 335px;
-            height: 174px; 
-            }
-
-            &_image_landscape {
+            &_image_container{
                 width: 335px;
                 height: 174px;
-                object-fit: cover;
-                object-position: bottom;
-            }
+               
+            }   
 
-            &_image_portrait {
-                width: 335px;
-                height: 174px;
-                object-fit: cover;
-                object-position: 0 62%; //  horiz vert
-            }
+                &.image {
+                    width: 335px;
+                    height: 174px;
+                    object-fit: cover;
+                
+                    &.landscape {
+                        object-position: bottom;
+                    }
+
+                    &.portrait {
+                        object-position: 0 62%; //  horiz vert
+                    }
+                }
 
             &_text {
                 @include flex_center_row;

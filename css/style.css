@@ -80,27 +80,26 @@ hr, button {
   animation-fill-mode: forwards;
   animation-duration: 2.5s;
   animation-timing-function: cubic-bezier(0.17, 0.62, 0.44, 0.89);
-  transform-style: preserve-3d;
 }
 @keyframes opacity-appearance {
   0% {
     opacity: 0;
   }
   20% {
-    transform: scale3d(1.5, 1.5, 1.5);
+    transform: scale(1.5, 1.5);
   }
   40% {
-    transform: scale3d(1, 1, 1);
+    transform: scale(1, 1);
   }
   60% {
-    transform: scale3d(1.5, 1.5, 1.5);
+    transform: scale(1.5, 1.5);
   }
   80% {
-    transform: scale3d(1, 1, 1);
+    transform: scale(1, 1);
   }
   100% {
     opacity: 1;
-    transform: scale3d(1.5, 1.5, 1.5);
+    transform: scale(1.5, 1.5);
   }
 }
 
@@ -178,6 +177,8 @@ hr, button {
   border-radius: 25px;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
   box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.08);
+  z-index: 1;
+  transition: transform 0.5s cubic-bezier(0.2, 0.5, 0.3, 2);
   width: 50%;
   margin-bottom: 3rem;
   padding: 0 0.8rem;
@@ -185,6 +186,7 @@ hr, button {
 .order_button:hover {
   background: linear-gradient(170deg, #ff93e1, #a16be0);
   box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.18);
+  transform: scale(1.2);
 }
 
 .cards {
@@ -358,11 +360,14 @@ main .book_menu .book_menu_button {
   border-radius: 25px;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
   box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.08);
+  z-index: 1;
+  transition: transform 0.5s cubic-bezier(0.2, 0.5, 0.3, 2);
   width: 60%;
 }
 main .book_menu .book_menu_button:hover {
   background: linear-gradient(170deg, #ff93e1, #a16be0);
   box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.18);
+  transform: scale(1.2);
 }
 main .functioning {
   height: 440px;
@@ -464,20 +469,19 @@ main .restaurants_home_cards .restaurant_home_card {
 main .restaurants_home_cards .restaurant_home_card:hover {
   box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.18);
 }
-main .restaurants_home_cards .restaurant_home_card_image_link {
+main .restaurants_home_cards .restaurant_home_card_image_container {
   width: 335px;
   height: 174px;
 }
-main .restaurants_home_cards .restaurant_home_card_image_landscape {
+main .restaurants_home_cards .restaurant_home_card.image {
   width: 335px;
   height: 174px;
   object-fit: cover;
+}
+main .restaurants_home_cards .restaurant_home_card.image.landscape {
   object-position: bottom;
 }
-main .restaurants_home_cards .restaurant_home_card_image_portrait {
-  width: 335px;
-  height: 174px;
-  object-fit: cover;
+main .restaurants_home_cards .restaurant_home_card.image.portrait {
   object-position: 0 62%;
 }
 main .restaurants_home_cards .restaurant_home_card_text {
