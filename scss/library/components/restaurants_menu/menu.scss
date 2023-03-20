@@ -6,12 +6,6 @@
     @include flex_center_column;
     width:100%;
     background-color: $light_bg_color;
-
-    section:last-of-type {
-        div.card:last-of-type {
-            margin: 0 0 3rem 0;
-        }
-    }
 }
 
 .section_cards_container{

@@ -51,4 +51,38 @@
         }
     }
 }
-   
+
+
+
+@mixin card_checked{
+    animation: card_checked 2s cubic-bezier(1,.31,.4,.2) forwards;
+  
+    @keyframes card_checked {
+
+        0%{
+            transform: translateY(0px) rotateY(0);
+        }
+
+        10%{
+            transform: translateY(10px) rotateY(0) ;
+        }
+
+        40%{
+            transform: translateY(-45px) rotateY(1080deg);
+        }
+
+        50%{
+            transform: translateY(0px);
+        }
+
+        51%{
+            font-size: 1.9rem;
+            transform: scale(0.1);
+        }
+
+        100%{
+            font-size:2.5rem;
+            transform: scale(1);
+        }
+    }
+}

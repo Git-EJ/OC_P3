@@ -35,3 +35,7 @@ $font_light: 300;
 $header_height: 63px;
 $menu_restaurants_name_radius_size: 40px;
 $menu_restaurants_name_negative_radius_size: calc(-1 * $menu_restaurants_name_radius_size);
+
+$menu_card_height:70px;
+$menu_card_anim_duration:1.5s;
+$menu_card_anim_cubic_bezier:cubic-bezier(0.2, 0.5, 0.3, 1.5);
