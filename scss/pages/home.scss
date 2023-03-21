@@ -1,8 +1,5 @@
 .home_wrapper {
     @include home_pages_display_timeout;
-    width: 375px;
-    margin: 0 auto;
-    background: $wrapper_bg;
     position:relative;
     z-index:2;
 }
@@ -40,6 +37,7 @@ main {
         height: 288px;
         text-align: center;
         background: $light_bg_color;
+        padding:0 1rem 0;
 
         h1 {
             @include section_tittle_font;
@@ -62,19 +60,23 @@ main {
 
     .functioning {
         height: 440px;
-        margin: 3rem 1rem 0;
+        margin: 0 1rem 0;
+        @include flex_center_column;
+    }
+    
+    .functioning_cards{  
 
-        &_title {
+        .functioning_title {
             @include section_tittle_font;
         }
 
-        &_card {
+        .functioning_card {
             @include flex_center_row;
             justify-content: space-around;
             position: relative;
             height: 73px;
             width: 323px;
-            margin: 2rem 0 0 1rem;
+            margin: 2rem 0 0 0rem;
             font-weight: $font_half_bold;
             background: $light_bg_color;
             border-radius: 15px;
@@ -124,26 +126,33 @@ main {
         }
     }
 
+
     /*======================================= Restaurants =======================================*/
 
     .restaurants_home {
         height: 1225px;
+        @include flex_center_column;
         background: $light_bg_color;
-        padding: 3.5rem 1.2rem 0;
+        padding: 3.5rem 1rem 0;
 
-        &_title {
-            @include section_tittle_font;
-            margin: 0 0 1.7rem 0;
-        }
+
     }
-
+    
     .restaurants_home_cards {
         @include flex_center_column;
+        width:335px;
         gap: 1.1rem 0;
+        
+        .restaurants_home_title {
+            @include section_tittle_font;
+            width:100%;
+            margin: 0 0 1.7rem 0;
+        }
+
 
         .restaurant_home_card {
             @include flex_center_column;
-            width: 335px;
+            width: 100%;
             height: 251px;
             position: relative;
             border-radius: 15px;
@@ -155,13 +164,13 @@ main {
             }
 
             &_image_container{
-                width: 335px;
+                width: 100%;
                 height: 174px;
                
             }   
 
             &.image {
-                width: 335px;
+                width: 100%;
                 height: 174px;
                 object-fit: cover;
                 border-radius:15px 15px 0 0; 

@@ -1,8 +1,5 @@
 .menu_wrapper {
     @include menu_pages_display_timeout;
-    width: 375px;
-    margin: 0 auto;
-    background: $wrapper_bg;
 }
 
 

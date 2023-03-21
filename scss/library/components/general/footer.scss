@@ -1,40 +1,43 @@
 
-@mixin footer_title {
-    @include flex_center;
-    justify-content: flex-start;
-    height: 62px;
-    font-family: $font_logo;
-    font-size: 1.1rem;
-    text-rendering: geometricPrecision;
-}
-
-
 @mixin footer_component {
+    @include flex_center;
     width: 100%;
     height: 197px;
     padding: 0 1.2rem;
     background: $footer_bg;
     color: $footer_font_color;
+    
 
-    .footer_title {
-        @include footer_title;
-    }
-
-    .footer_text {
+    .footer_container{
         @include flex_center_column;
-        justify-content: flex-start;
         align-items: flex-start;
-        height: 135px;
-        gap: 0.5rem 0;
+        width:335px;
+        margin:0;
 
-        &_line {
-            font-size: 0.9rem;
+        .footer_title {
+            @include flex_center_column;
+            align-items: flex-start;
+            height: 62px;
+            font-family: $font_logo;
+            font-size: 1.2rem;
         }
 
-        .fa-solid {
-            width: 20px;
-            margin-right: 0.3rem;
-            font-size: 0.7rem;
+        .footer_text {
+            @include flex_center_column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            height: 135px;
+            gap: 0.5rem 0;
+
+            &_line {
+                font-size: 0.9rem;
+            }
+
+            .fa-solid {
+                width: 20px;
+                margin-right: 0.3rem;
+                font-size: 0.7rem;
+            }
         }
     }
 }

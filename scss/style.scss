@@ -22,6 +22,7 @@
 @import "./library/components/restaurants_menu/menu.scss";
 @import "./library/components/restaurants_menu/cards.scss";
 
+@import "./pages/media_queries.scss";
 @import "./pages/home.scss";
 @import "./pages/restaurants_menu.scss";
 
@@ -36,6 +37,13 @@ body {
     ::-webkit-scrollbar {
         display: none;
     }
+}
+
+
+.home_wrapper,
+.menu_wrapper{
+    margin: 0 auto;
+    background: $wrapper_bg;
 }
 
 header {
