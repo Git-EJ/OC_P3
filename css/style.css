@@ -606,8 +606,8 @@ main .book_menu .book_menu_button:hover {
   transform: scale(1.2);
 }
 main .functioning {
-  height: 440px;
-  margin: 0 1rem 0;
+  height: auto;
+  margin: 3rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -678,13 +678,13 @@ main .functioning_cards .functioning_card:hover .fa-store {
   -webkit-text-fill-color: transparent;
 }
 main .restaurants_home {
-  height: 1225px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background: #F7F7F7;
-  padding: 3.5rem 1rem 0;
+  padding: 3rem 1rem 4rem;
 }
 main .restaurants_home_cards {
   display: flex;
