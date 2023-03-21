@@ -11,7 +11,7 @@
     .footer_container{
         @include flex_center_column;
         align-items: flex-start;
-        width:335px;
+        width: clamp(335px, 70vw, 550px);
         margin:0;
 
         .footer_title {
