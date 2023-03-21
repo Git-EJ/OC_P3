@@ -1,9 +1,35 @@
-@mixin pages_display_timeout{
-    animation: pages_display_timeout 3s;
 
-    @keyframes pages_display_timeout{
+/*===================== Home =====================*/ 
 
-        0%{opacity:0}
+@mixin home_loading_spinner{
+    animation: loading_spinner 3s forwards;
+    
+    @keyframes loading_spinner{
+        0%{opacity:1};
+        70%{opacity:1};
+        100%{opacity:0};
+    }
+}
+
+
+@mixin home_pages_display_timeout{
+    animation: home_pages_display_timeout 3s backwards;
+    
+    @keyframes home_pages_display_timeout{
+        0%{opacity:0};
+        80%{opacity:0};
+        100%{ opacity:1 };  
+    }
+}
+
+
+/*================== Restaurants_Menu ==================*/ 
+
+@mixin menu_pages_display_timeout{
+    animation: menu_pages_display_timeout 2s;
+
+    @keyframes menu_pages_display_timeout{
+        0%{opacity:0};
         100%{opacity: 100%}
     }
 }

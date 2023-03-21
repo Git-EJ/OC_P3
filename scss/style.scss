@@ -8,17 +8,20 @@
 @import "./library/components/general/display.scss";
 @import "./library/components/general/gradient_icons.scss";
 @import "./library/components/general/gradient_buttons.scss";
+
+@import "./pages/animation_loading_pages.scss";
 @import "./library/components/restaurants_menu/animations.scss";
 @import "./library/components/restaurants_menu/animations_functions.scss";
+
 @import "./library/components/general/header.scss";
 @import "./library/components/general/heart_icons.scss";
 @import "./library/components/general/footer.scss";
 @import "./library/components/general/font.scss";
+@import "./library/components/general/loader.scss";
 
 @import "./library/components/restaurants_menu/menu.scss";
 @import "./library/components/restaurants_menu/cards.scss";
 
-@import "./pages/animation_loading_pages.scss";
 @import "./pages/home.scss";
 @import "./pages/restaurants_menu.scss";
 
@@ -27,19 +30,12 @@
 html,
 body {
     font-family: 'Roboto', sans-serif;
-    // -ms-overflow-style: none;
-    // scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
-    // ::-webkit-scrollbar {
-    //     display: none;
-    // }
-}
-
-.wrapper {
-    @include pages_display_timeout;
-    width: 375px;
-    margin: 0 auto;
-    background: $wrapper_bg;
+    ::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 header {

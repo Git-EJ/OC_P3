@@ -1,3 +1,11 @@
+.menu_wrapper {
+    @include menu_pages_display_timeout;
+    width: 375px;
+    margin: 0 auto;
+    background: $wrapper_bg;
+}
+
+
 /*=======================================================================================*/
 /*======================================= Header =======================================*/
 /*=====================================================================================*/
@@ -12,6 +20,10 @@
     font-size:1.3rem;
     font-weight: $font_bold;
     color:#353535; 
+
+        &:hover{
+            @include linear_gradient_icons;
+        }
 }
 
 .menu_image{
@@ -19,19 +31,9 @@
     height:261px;
     position:sticky;
     top: $header_height;
-
-    &_landscape{
-        width:99.9%; //remove the overflow of the image
-        height:261px; 
-        object-fit: cover;    
-    }
-
-    &_portrait{
-        // width: 99.9%;
-        // height: 261px;
-        // object-fit: cover;
-        image-rendering: optimizeQuality;
-    }
+    width:99.7%; //remove the overflow of the image
+    height:261px; 
+    object-fit: cover;  
 }
 
 /*=======================================================================================*/

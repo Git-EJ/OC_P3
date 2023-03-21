@@ -13,6 +13,10 @@
         &_text{
             font-family: $font_logo;
             font-size: 2rem;
+            
+            &:hover{
+                @include linear_gradient_icons;
+            }
         }
     
     
