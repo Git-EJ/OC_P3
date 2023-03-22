@@ -11,9 +11,7 @@
 
         .fa-solid {
             @include linear_gradient_icons;
-            // @include heart_icon_animation;
-            display: inline-block;
-            /*active le display*/
+            display: inline-block; /*active le display*/
         }
     }
 }
@@ -37,41 +35,3 @@
     display:none;
     @include heart_icon;
 }
-
- 
-
-
-
-
-
-// .heart_icon_checkbox[type=checkbox] {
-//  appearance: none;
-// }
-
-// .heart_icon_checkbox[type=checkbox] {
-//     -border-radius: 4px;
-//     height: 30px;
-//     width: 30px;
-//     background: transparent;
-//     // background: #fff;
-//     // border: 1px solid #ccc;
-// }
-
-// .heart_icon_checkbox[type="checkbox"]:checked {
-//     background: $button_bg_gradient;
-//     margin:0px;
-//     // position: relative;
-//     &:before {
-//     height: 30px;
-//     width:30px;
-//     font-family: FontAwesome;
-//     content: '\f00c';
-//     display: block;
-//     color: rgb(167, 21, 21);
-//     font-size: 20px;
-//     //   position: absolute;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     }
-//   }

@@ -71,7 +71,7 @@
 
 
 
-@mixin new_label_shake {
+@mixin new_label_and_menu_title_shake {
     animation: new_label_shaking 1s infinite;
 
     @keyframes new_label_shaking {

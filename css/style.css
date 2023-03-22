@@ -196,8 +196,7 @@ hr, button {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
-  /*active le display*/
+  display: inline-block; /*active le display*/
 }
 
 .loader_wrapper {
@@ -295,7 +294,7 @@ hr, button {
   }
 }
 .loader_wrapper .text_and_icon .text {
-  font-family: "Shrikhand", cursive;
+  font-family: "Shrikhand", sans-serif;
   padding: 0 1rem;
 }
 
@@ -312,10 +311,15 @@ hr, button {
 }
 
 .section_cards_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
   margin-top: -80px;
   position: sticky;
   z-index: 1;
+  background: #F7F7F7;
 }
 
 .section_menu {
@@ -324,9 +328,12 @@ hr, button {
   align-items: center;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
+  width: clamp(375px, 70vw, 550px);
   padding: 0 0.8rem;
   background: #F7F7F7;
+}
+.section_menu:first-of-type {
+  margin-top: 0.4rem;
 }
 .section_menu_title {
   font-weight: 300;
@@ -337,6 +344,33 @@ hr, button {
   margin-bottom: 1rem;
   border-top: 2px solid #99E2D0;
   color: transparent;
+}
+.section_menu_title:hover {
+  animation: new_label_shaking 1s infinite;
+  font-weight: 400;
+}
+@keyframes new_label_shaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateY(-3px);
+  }
+  35% {
+    transform: translateY(-3px) rotate(7deg);
+  }
+  55% {
+    transform: translateY(-3px) rotate(-7deg);
+  }
+  65% {
+    transform: translateY(-3px) rotate(7deg);
+  }
+  75% {
+    transform: translateY(-3px) rotate(-7deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
 }
 
 .order_button {
@@ -374,7 +408,7 @@ hr, button {
   display: none;
 }
 .cards .dish_checkbox:checked ~ .card .card_left {
-  width: 65%;
+  width: 67%;
 }
 .cards .dish_checkbox:checked ~ .card .dish_choice_container {
   transform: translateX(-70px);
@@ -433,7 +467,7 @@ hr, button {
   transform: scale(1.01);
 }
 .cards .card:hover .card_left {
-  width: 65%;
+  width: 67%;
 }
 .cards .card:hover .dish_choice_container {
   transform: translateX(-70px);
@@ -772,8 +806,7 @@ main .restaurants_home_cards .restaurant_home_card_text_right:hover .fa-solid {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
-  /*active le display*/
+  display: inline-block; /*active le display*/
 }
 main .restaurants_home_cards .restaurant_home_card .new_label {
   animation: new_label_shaking 1s infinite;
@@ -889,8 +922,7 @@ main .restaurants_home_cards .restaurant_home_card .new_label {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
-  /*active le display*/
+  display: inline-block; /*active le display*/
 }
 
 .cancel_menu_restaurants_name_radius {
@@ -937,6 +969,7 @@ header .logo_container {
 header .logo_container_text {
   font-family: "Shrikhand", sans-serif;
   font-size: 2rem;
+  transition: transform 0.5s cubic-bezier(0.2, 0.5, 0.3, 2);
 }
 header .logo_container_text:hover {
   color: #9356DC;
@@ -944,6 +977,7 @@ header .logo_container_text:hover {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  transform: scale(1.2);
 }
 
 footer {
@@ -974,6 +1008,15 @@ footer .footer_container .footer_title {
   height: 62px;
   font-family: "Shrikhand", sans-serif;
   font-size: 1.2rem;
+  transition: transform 0.5s cubic-bezier(0.2, 0.5, 0.3, 2);
+}
+footer .footer_container .footer_title:hover {
+  color: #9356DC;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.2);
 }
 footer .footer_container .footer_text {
   display: flex;

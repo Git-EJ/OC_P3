@@ -1,6 +1,6 @@
 @mixin linear_gradient_icons {
     color: $primary_color;
-    background: $button_bg_gradient;
+    background: $gradient_color;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

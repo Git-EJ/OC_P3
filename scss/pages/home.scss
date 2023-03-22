@@ -215,7 +215,7 @@ main {
             }
 
             .new_label {
-                @include new_label_shake;
+                @include new_label_and_menu_title_shake;
                 @include flex_center;
                 height: 30px;
                 position: absolute;

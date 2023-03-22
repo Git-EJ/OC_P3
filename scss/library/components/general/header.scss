@@ -4,18 +4,20 @@
     position: sticky;
     top: 0px;
     z-index: 2;
-
+    
     .logo_container {
         @include flex_center;
         width: 100%;
         height: $header_height;
-
+        
         &_text{
             font-family: $font_logo;
             font-size: 2rem;
+            transition: $hover_cubic_bezier;
             
             &:hover{
                 @include linear_gradient_icons;
+                transform: scale(1.2);
             }
         }
     

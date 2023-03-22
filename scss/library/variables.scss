@@ -1,6 +1,7 @@
 $primary_color: #9356DC;
 $secondary_color: #FF79DA;
 $tertiary_color: #99E2D0;
+$gradient_color: linear-gradient(170deg, $secondary_color, $primary_color);
 
 $buttons_font_color: #fff;
 $balls_font_color: #fff;
@@ -39,3 +40,5 @@ $menu_restaurants_name_negative_radius_size: calc(-1 * $menu_restaurants_name_ra
 $menu_card_height:70px;
 $menu_card_anim_duration:1.5s;
 $menu_card_anim_cubic_bezier:cubic-bezier(0.2, 0.5, 0.3, 1.5);
+
+$hover_cubic_bezier: transform 0.5s cubic-bezier(0.2, 0.5, 0.3, 2);
