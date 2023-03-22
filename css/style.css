@@ -138,8 +138,23 @@ hr, button {
 .restaurant_home_card_text_right input[type=checkbox],
 .restaurant_home_card_text_right .checked,
 .menu_restaurants_name_heart_icon input[type=checkbox],
-.menu_restaurants_name_heart_icont .checked {
+.menu_restaurants_name_heart_icon .checked {
   display: none;
+  background: linear-gradient(#FF79DA 10%, #9356DC 30%, transparent 0%);
+  background-size: 100% 300%;
+  animation: heart_animation_bg 1s linear forwards;
+  color: #9356DC;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes heart_animation_bg {
+  0% {
+    background-position: 0 -50%;
+  }
+  100% {
+    background-position: 0 0%;
+  }
 }
 
 .restaurant_home_card_text_right input[type=checkbox]:checked ~ .checked,
@@ -180,6 +195,13 @@ hr, button {
 .restaurant_home_card_text_right input[type=checkbox]:checked ~ .unchecked,
 .menu_restaurants_name_heart_icon input[type=checkbox]:checked ~ .unchecked {
   display: none;
+  background: linear-gradient(#FF79DA 10%, #9356DC 30%, transparent 0%);
+  background-size: 100% 300%;
+  animation: heart_animation_bg 1s linear forwards;
+  color: #9356DC;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .restaurant_home_card_text_right input[type=checkbox]:checked ~ .unchecked .fa-solid,
 .menu_restaurants_name_heart_icon input[type=checkbox]:checked ~ .unchecked .fa-solid {
@@ -191,12 +213,15 @@ hr, button {
 }
 .restaurant_home_card_text_right input[type=checkbox]:checked ~ .unchecked:hover .fa-solid,
 .menu_restaurants_name_heart_icon input[type=checkbox]:checked ~ .unchecked:hover .fa-solid {
-  color: #9356DC;
-  background: linear-gradient(170deg, #FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
   display: inline-block; /*active le display*/
+}
+@keyframes heart_animation_bg {
+  0% {
+    background-position: 0 -50%;
+  }
+  100% {
+    background-position: 0 0%;
+  }
 }
 
 .loader_wrapper {
@@ -554,12 +579,6 @@ hr, button {
 /*=========================================================================*/
 /*==================================MOB====================================*/
 /*=========================================================================*/
-@media only screen and (max-width: 767px) {
-  .home_wrapper,
-  .menu_wrapper {
-    width: 100%;
-  }
-}
 /*=========================================================================*/
 /*=========================== DISPLAY --> NONE ============================*/
 /*=========================================================================*/
@@ -801,11 +820,6 @@ main .restaurants_home_cards .restaurant_home_card_text_right:hover .fa-regular 
   display: none;
 }
 main .restaurants_home_cards .restaurant_home_card_text_right:hover .fa-solid {
-  color: #9356DC;
-  background: linear-gradient(170deg, #FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
   display: inline-block; /*active le display*/
 }
 main .restaurants_home_cards .restaurant_home_card .new_label {
@@ -844,6 +858,18 @@ main .restaurants_home_cards .restaurant_home_card .new_label {
   }
   100% {
     transform: translateY(0) rotate(0);
+  }
+}
+
+.menu_wrapper {
+  animation: menu_pages_display_timeout 2s;
+}
+@keyframes menu_pages_display_timeout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
   }
 }
 
@@ -917,11 +943,6 @@ main .restaurants_home_cards .restaurant_home_card .new_label {
   display: none;
 }
 .menu_restaurants_name_heart_icon:hover .fa-solid {
-  color: #9356DC;
-  background: linear-gradient(170deg, #FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
   display: inline-block; /*active le display*/
 }
 
@@ -950,6 +971,7 @@ body ::-webkit-scrollbar {
 .menu_wrapper {
   margin: 0 auto;
   background: #fff;
+  width: 100%;
 }
 
 header {

@@ -36,7 +36,6 @@
 
 .center_in{
     @include flex_center;
-    // @include center_in_border;
     position:absolute;
     width:70vw;
     height:70vw;

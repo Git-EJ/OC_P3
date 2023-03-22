@@ -1,26 +1,37 @@
 
+@mixin heart_bg {
+    @include heart_animation_bg;
+    color: $primary_color;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;  
+}
+
+
 @mixin heart_icon {
     .fa-solid {
         display: none;
     }
     
-    &:hover  {
+    &:hover
+      {
         .fa-regular {
             display: none; //opacité none 
         }
-
+        
         .fa-solid {
-            @include linear_gradient_icons;
             display: inline-block; /*active le display*/
         }
     }
 }
 
+
 .restaurant_home_card_text_right input[type="checkbox"],
 .restaurant_home_card_text_right .checked,
 .menu_restaurants_name_heart_icon input[type="checkbox"],
-.menu_restaurants_name_heart_icont .checked {
+.menu_restaurants_name_heart_icon .checked {
     display: none;
+    @include heart_bg;
 }
 
 .restaurant_home_card_text_right input[type="checkbox"]:checked~.checked,
@@ -34,4 +45,5 @@
 .menu_restaurants_name_heart_icon input[type="checkbox"]:checked~.unchecked {
     display:none;
     @include heart_icon;
+    @include heart_bg;
 }

@@ -17,8 +17,7 @@
   },
   "homepage": "https://github.com/Git-EJ/OC_P3#readme",
   "dependencies": {
-    "sass": "^1.58.3"
+    "sass": "^1.59.3"
   },
-  "devDependencies": {},
   "description": ""
 }
