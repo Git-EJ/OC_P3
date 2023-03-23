@@ -9,6 +9,66 @@
 
 @media only screen and (min-width: 992px) {
 
+    .mob_tab_header{
+        display:none;
+    }
+
+    .top_mob_tab{
+        display:none;
+    }
+    
+
+
+main{
+
+    .book_menu {
+        height: auto;
+
+        h1 {
+            margin: 1rem 0 0 0;
+        }
+
+        h2 {
+            margin: 0.5rem 0 0 0;
+        }
+
+        .book_menu_button {
+            margin: 1.5rem 0 2rem;
+        }
+    }
+
+    .functioning {
+        margin: 2rem 1rem 3rem;
+    }
+
+    .functioning_title {
+        @include flex_center;
+        @include section_tittle_font;
+        margin-bottom: 1rem;
+    }
+
+    .functioning_cards{
+        @include flex_center;
+        margin:0 1rem;
+        gap:0 2rem;
+        width:100%;
+
+
+        .functioning_card{
+            margin: 0;
+            width:clamp(250px, 29vw, 400px);
+
+
+        }
+    }
+}
+
+
+
+
+
+
+
 
 }
 
@@ -19,7 +79,16 @@
 
 @media only screen and (min-width: 768px) and (max-width : 991px) {
 
+    .desktop_header{
+        display:none;
+    }
+
+    .top_desktop{
+        display:none;
+    }
 }
+
+
 
 
 /*=========================================================================*/
@@ -27,9 +96,13 @@
 /*=========================================================================*/
 
 @media only screen and (max-width : 767px) {
-    .home_wrapper,
-    .menu_wrapper{
-        
+    
+    header .desktop_header{
+        display:none;
+    }
+    
+    .top_desktop{
+        display:none;
     }
 }
 

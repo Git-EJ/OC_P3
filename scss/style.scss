@@ -22,9 +22,9 @@
 @import "./library/components/restaurants_menu/menu.scss";
 @import "./library/components/restaurants_menu/cards.scss";
 
-@import "./pages/media_queries.scss";
 @import "./pages/home.scss";
 @import "./pages/restaurants_menu.scss";
+@import "./pages/media_queries.scss";
 
 
 
@@ -47,8 +47,9 @@ body {
     width: 100%;
 }
 
-header {
-    @include header_component;
+header{
+    @include mob_tab_header_component;
+    @include desktop_header_component;
 }
 
 footer {

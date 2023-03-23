@@ -41,8 +41,7 @@ main {
 
         h1 {
             @include section_tittle_font;
-            margin: 0 4rem;
-            margin-top: 35px;
+            margin: 35px 4rem 0;
         }
 
         h2 {
@@ -64,18 +63,22 @@ main {
         @include flex_center_column;
     }
     
-    .functioning_cards{  
+    .functioning_title {
+        @include flex_center;
+        @include section_tittle_font;
+        justify-content: flex-start;
+        width: 323px;
+    }
 
-        .functioning_title {
-            @include section_tittle_font;
-        }
+    .functioning_cards{  
+        width: 323px;
 
         .functioning_card {
             @include flex_center_row;
             justify-content: space-around;
             position: relative;
             height: 73px;
-            width: 323px;
+            width: 100%;
             margin: 2rem 0 0 0rem;
             font-weight: $font_half_bold;
             background: $light_bg_color;

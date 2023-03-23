@@ -2,24 +2,24 @@
 /*===================== Home =====================*/ 
 
 @mixin home_loading_spinner{
-    // animation: loading_spinner 3s forwards;
+    animation: loading_spinner 3s forwards;
     
-    // @keyframes loading_spinner{
-    //     0%{opacity:1};
-    //     70%{opacity:1};
-    //     100%{opacity:0};
-    // }
+    @keyframes loading_spinner{
+        0%{opacity:1};
+        70%{opacity:1};
+        100%{opacity:0};
+    }
 }
 
 
 @mixin home_pages_display_timeout{
-    // animation: home_pages_display_timeout 3s backwards;
+    animation: home_pages_display_timeout 3s backwards;
     
-    // @keyframes home_pages_display_timeout{
-    //     0%{opacity:0};
-    //     80%{opacity:0};
-    //     100%{ opacity:1 };  
-    // }
+    @keyframes home_pages_display_timeout{
+        0%{opacity:0};
+        80%{opacity:0};
+        100%{ opacity:1 };  
+    }
 }
 
 

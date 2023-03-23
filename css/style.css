@@ -225,6 +225,7 @@ hr, button {
 }
 
 .loader_wrapper {
+  animation: loading_spinner 3s forwards;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -234,6 +235,17 @@ hr, button {
   right: 0;
   left: 0;
   z-index: 1;
+}
+@keyframes loading_spinner {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .loader_wrapper .container {
   display: flex;
@@ -319,6 +331,88 @@ hr, button {
   }
 }
 .loader_wrapper .text_and_icon .text {
+  font-family: "Shrikhand", sans-serif;
+  padding: 0 1rem;
+}
+
+.desktop_loader_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.desktop_loader_wrapper .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 0.8rem;
+}
+.desktop_loader_wrapper .center_out {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loader_center 3s infinite linear;
+  position: relative;
+  width: 10vw;
+  height: 10vw;
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+  box-shadow: 0.3vw 0.3vw 0.1vw rgba(255, 121, 218, 0.705), 0.3vw 0.3vw 0.1vw 0.1vw rgba(147, 86, 220, 0.705);
+}
+@keyframes loader_center {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+.desktop_loader_wrapper .center_in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 2vw 0.5vw rgba(147, 86, 220, 0.267);
+}
+.desktop_loader_wrapper .text_and_icon {
+  animation: loader_text_and_icon 5s infinite linear;
+}
+@keyframes loader_text_and_icon {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  75% {
+    transform: rotateZ(10deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+.desktop_loader_wrapper .text_and_icon .fa-utensils,
+.desktop_loader_wrapper .text_and_icon .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #9356DC;
+  width: 100%;
+  height: auto;
+  font-size: clamp(2rem, 2vw, 3rem);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.desktop_loader_wrapper .text_and_icon .text {
   font-family: "Shrikhand", sans-serif;
   padding: 0 1rem;
 }
@@ -570,30 +664,21 @@ hr, button {
   margin: 0 0 3rem 0;
 }
 
-/*===========================================================================*/
-/*==================================DESKTOP==================================*/
-/*===========================================================================*/
-/*==========================================================================*/
-/*==================================TAB=====================================*/
-/*==========================================================================*/
-/*=========================================================================*/
-/*==================================MOB====================================*/
-/*=========================================================================*/
-/*=========================================================================*/
-/*=========================== DISPLAY --> NONE ============================*/
-/*=========================================================================*/
-@media only screen and (max-width: 374px) {
-  body {
-    background: #99E2D0;
-  }
-  .home_wrapper,
-  .menu_wrapper {
-    display: none;
-  }
-}
 .home_wrapper {
+  animation: home_pages_display_timeout 3s backwards;
   position: relative;
   z-index: 2;
+}
+@keyframes home_pages_display_timeout {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*=======================================================================================*/
@@ -634,8 +719,7 @@ main .book_menu {
 main .book_menu h1 {
   font-size: 1.5rem;
   font-weight: 700;
-  margin: 0 4rem;
-  margin-top: 35px;
+  margin: 35px 4rem 0;
 }
 main .book_menu h2 {
   margin: 12px 0 32px 0;
@@ -666,9 +750,17 @@ main .functioning {
   align-items: center;
   flex-direction: column;
 }
-main .functioning_cards .functioning_title {
+main .functioning_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.5rem;
   font-weight: 700;
+  justify-content: flex-start;
+  width: 323px;
+}
+main .functioning_cards {
+  width: 323px;
 }
 main .functioning_cards .functioning_card {
   display: flex;
@@ -678,7 +770,7 @@ main .functioning_cards .functioning_card {
   justify-content: space-around;
   position: relative;
   height: 73px;
-  width: 323px;
+  width: 100%;
   margin: 2rem 0 0 0rem;
   font-weight: 500;
   background: #F7F7F7;
@@ -956,6 +1048,86 @@ main .restaurants_home_cards .restaurant_home_card .new_label {
   z-index: 2;
 }
 
+/*===========================================================================*/
+/*==================================DESKTOP==================================*/
+/*===========================================================================*/
+@media only screen and (min-width: 992px) {
+  .mob_tab_header {
+    display: none;
+  }
+  .top_mob_tab {
+    display: none;
+  }
+  main .book_menu {
+    height: auto;
+  }
+  main .book_menu h1 {
+    margin: 1rem 0 0 0;
+  }
+  main .book_menu h2 {
+    margin: 0.5rem 0 0 0;
+  }
+  main .book_menu .book_menu_button {
+    margin: 1.5rem 0 2rem;
+  }
+  main .functioning {
+    margin: 2rem 1rem 3rem;
+  }
+  main .functioning_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  main .functioning_cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+    gap: 0 2rem;
+    width: 100%;
+  }
+  main .functioning_cards .functioning_card {
+    margin: 0;
+    width: clamp(250px, 29vw, 400px);
+  }
+}
+/*==========================================================================*/
+/*==================================TAB=====================================*/
+/*==========================================================================*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .desktop_header {
+    display: none;
+  }
+  .top_desktop {
+    display: none;
+  }
+}
+/*=========================================================================*/
+/*==================================MOB====================================*/
+/*=========================================================================*/
+@media only screen and (max-width: 767px) {
+  header .desktop_header {
+    display: none;
+  }
+  .top_desktop {
+    display: none;
+  }
+}
+/*=========================================================================*/
+/*=========================== DISPLAY --> NONE ============================*/
+/*=========================================================================*/
+@media only screen and (max-width: 374px) {
+  body {
+    background: #99E2D0;
+  }
+  .home_wrapper,
+  .menu_wrapper {
+    display: none;
+  }
+}
 html,
 body {
   font-family: "Roboto", sans-serif;
@@ -975,6 +1147,11 @@ body ::-webkit-scrollbar {
 }
 
 header {
+  background: #fff;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0px;
+  z-index: 2;
   background: #fff;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -1000,6 +1177,13 @@ header .logo_container_text:hover {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(1.2);
+}
+header .desktop_logo_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 170px;
 }
 
 footer {
