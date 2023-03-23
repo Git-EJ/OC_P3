@@ -6,6 +6,7 @@
     z-index: 2;
 }
 
+
 @mixin mob_tab_header_component {
 
     .mob_tab_logo_container {
@@ -30,10 +31,10 @@
 @mixin desktop_header_component {
     background: $light_bg_color;
     box-shadow: none;
-    
+
     .desktop_logo_container {
         @include flex_center;
         width: 100%;
-        height: 200px;
+        height: 220px;
     }
 }

@@ -1,133 +1,145 @@
-
 /*========================================== MOBILE / TAB ==========================================*/
 
-.loader_wrapper{
-    @include home_loading_spinner;
-    @include flex_center;
-    // background:$tertiary_color;
-    // border: 4px solid orange;
-    position:fixed;
-    top: 0;
-    bottom:0;
-    right:0;
-    left:0;
-    z-index:1;
 
-    .loader_container{
+    .loader_wrapper{
         @include flex_center;
-        width:100%;
-        height:auto;
-        margin: 0.8rem;
-        // border: 4px solid rgb(0, 255, 13);
-    }
+        // background:$tertiary_color;
+        // border: 4px solid orange;
+        position:fixed;
+        top: 0;
+        bottom:0;
+        right:0;
+        left:0;
+        z-index:1;
 
-
-    .loader_center_out{
-        @include flex_center;
-        @include loader_animation_center;
-        position:relative;
-        width:45vw;
-        height:45vw;
-        max-width: 325px;
-        max-height: 325px;
-        border-radius:50%;
-        box-shadow: 0.5vw 0.5vw 0.3vw rgba($secondary_color, 0.705), // X  Y  blur-radius/rayon de flou  spread-radius/rayon étalement
-                    0.5vw 0.5vw 0.5vw 0.5vw rgba($primary_color, 0.705);
-    }
-
-    .loader_center_in{
-        @include flex_center;
-        position:absolute;
-        width:70vw;
-        height:70vw;
-        max-width: 500px;
-        max-height: 500px;
-        border-radius:50%; 
-        box-shadow: inset 0px 0px 5vw 2.5vw rgba($primary_color, 0.267);
-    }
-
-
-    .loader_text_and_icon{
-        @include loader_text_and_icon;
-
-        .fa-utensils,
-        .loader_text{
-            @include flex_center_column;
-            @include loader_animation_text;
+        .loader_container{
+            @include flex_center;
             width:100%;
             height:auto;
-            font-size: clamp(2rem, 15vw, 7rem);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            margin: 0.8rem;
+            // border: 4px solid rgb(0, 255, 13);
         }
 
-        .loader_text{
-            font-family: $font_logo;
-            padding:0 1rem;
-        } 
+
+        .loader_center_out{
+            @include flex_center;
+            @include loader_animation_center;
+            position:relative;
+            width:45vw;
+            height:45vw;
+            max-width: 325px;
+            max-height: 325px;
+            border-radius:50%;
+            box-shadow: 0.5vw 0.5vw 0.3vw rgba($secondary_color, 0.705), // X  Y  blur-radius/rayon de flou  spread-radius/rayon étalement
+                        0.5vw 0.5vw 0.5vw 0.5vw rgba($primary_color, 0.705);
+        }
+
+        .loader_center_in{
+            @include flex_center;
+            position:absolute;
+            width:70vw;
+            height:70vw;
+            max-width: 500px;
+            max-height: 500px;
+            border-radius:50%; 
+            box-shadow: inset 0px 0px 5vw 2.5vw rgba($primary_color, 0.267);
+        }
+
+
+        .loader_text_and_icon{
+            @include loader_text_and_icon;
+
+            .fa-utensils,
+            .loader_text{
+                @include flex_center_column;
+                @include loader_animation_text;
+                width:100%;
+                height:auto;
+                font-size: clamp(2rem, 15vw, 7rem);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+            }
+
+            .loader_text{
+                font-family: $font_logo;
+                padding:0 1rem;
+            } 
+        }
     }
-}
 
 
-/*==========================================DESKTOP==========================================*/
+    /*==========================================DESKTOP==========================================*/
 
 
-.desktop_logo_loader_wrapper{
-    @include flex_center;
-
-    .desktop_logo_loader_container{
+    .desktop_logo_loader_wrapper{
         @include flex_center;
-        width:100%;
-        height:auto;
-        margin: 0.8rem;
+    
+        .desktop_logo_loader_container{
+            @include flex_center;
+            width:100%;
+            height:auto;
+            margin: 0.8rem;
+        }
+
+
+        .desktop_logo_loader_center_out{
+            @include flex_center;
+            @include loader_animation_center;
+            position:relative;
+            width:120px;
+            height:120px;
+            border-radius:50%;
+            box-shadow: 0.3vw 0.3vw 0.1vw rgba($secondary_color, 0.705), // X  Y  blur-radius/rayon de flou  spread-radius/rayon étalement
+                        0.3vw 0.3vw 0.1vw 0.1vw rgba($primary_color, 0.705);
+        }
+
+        .desktop_logo_loader_center_in{
+            @include flex_center;
+            position:absolute;
+            width:190px;
+            height:190px;
+            border-radius:50%; 
+            box-shadow: inset 0px 0px 1vw 1vw rgba($primary_color, 0.267);
+        }
+
+
+        .desktop_logo_loader_text_and_icon{
+            @include loader_text_and_icon;
+
+            .fa-utensils,
+            .desktop_logo_loader_text{
+                @include flex_center_column;
+                background:$primary_color;
+                width:100%;
+                height:auto;
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+            }
+
+            .fa-utensils{
+                font-size: 2.2rem;
+            }
+
+
+            .desktop_logo_loader_text{
+                font-family: $font_logo;
+                padding:0 1rem; //without letters "o" and "d" are cut
+                font-size:2.7rem;
+            } 
+        }
     }
 
 
-    .desktop_logo_loader_center_out{
-        @include flex_center;
-        @include loader_animation_center;
-        position:relative;
-        width:120px;
-        height:120px;
-        border-radius:50%;
-        box-shadow: 0.3vw 0.3vw 0.1vw rgba($secondary_color, 0.705), // X  Y  blur-radius/rayon de flou  spread-radius/rayon étalement
-                    0.3vw 0.3vw 0.1vw 0.1vw rgba($primary_color, 0.705);
-    }
-
+    .desktop_logo_loader_container,
     .desktop_logo_loader_center_in{
-        @include flex_center;
-        position:absolute;
-        width:190px;
-        height:190px;
-        border-radius:50%; 
-        box-shadow: inset 0px 0px 2vw 2vw rgba($primary_color, 0.267);
+        transition: $hover_cubic_bezier;
+
+        &:hover {
+            transform:scale(1.3);
+        }
     }
 
 
-    .desktop_logo_loader_text_and_icon{
-        @include loader_text_and_icon;
 
-        .fa-utensils,
-        .desktop_logo_loader_text{
-            @include flex_center_column;
-            background:$primary_color;
-            width:100%;
-            height:auto;
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .fa-utensils{
-            font-size: 2.2rem;
-        }
-
-
-        .desktop_logo_loader_text{
-            font-family: $font_logo;
-            padding:0 1rem; //without d and 0  are cut
-            font-size:2.7rem;
-        } 
-    }
-}

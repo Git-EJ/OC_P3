@@ -5,11 +5,19 @@
 
 @media only screen and (min-width: 992px) {
 
+    .loader_wrapper{
+        @include home_loading_spinner_timeout;
+    }
+
     .mob_tab_header{
         display:none;
     }
 
     .top_mob_tab{
+        display:none;
+    }
+
+    .header_mob_tab_restaurants_menu{
         display:none;
     }
     
@@ -63,6 +71,10 @@
 
 @media only screen and (max-width : 991px) {
     
+    .loader_wrapper{
+        @include home_loading_spinner_timeout;
+    }
+
     .desktop_header{
         display:none;
     }
@@ -70,6 +82,7 @@
     .top_desktop{
         display:none;
     }
+
 }
 
 
@@ -86,5 +99,5 @@
     .home_wrapper,
     .menu_wrapper{
         display:none;
-    }
+    }   
 }

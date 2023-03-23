@@ -1,7 +1,7 @@
 
 /*===================== Home =====================*/ 
 
-@mixin home_loading_spinner{
+@mixin home_loading_spinner_timeout{
     animation: loading_spinner 3s forwards;
     
     @keyframes loading_spinner{
@@ -30,6 +30,7 @@
 
     @keyframes menu_pages_display_timeout{
         0%{opacity:0};
+        10%{opacity:20%};
         100%{opacity: 100%}
     }
 }

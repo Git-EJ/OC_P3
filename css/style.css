@@ -226,7 +226,6 @@ hr, button {
 
 /*========================================== MOBILE / TAB ==========================================*/
 .loader_wrapper {
-  animation: loading_spinner 3s forwards;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -236,17 +235,6 @@ hr, button {
   right: 0;
   left: 0;
   z-index: 1;
-}
-@keyframes loading_spinner {
-  0% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 .loader_wrapper .loader_container {
   display: flex;
@@ -377,7 +365,7 @@ hr, button {
   width: 190px;
   height: 190px;
   border-radius: 50%;
-  box-shadow: inset 0px 0px 2vw 2vw rgba(147, 86, 220, 0.267);
+  box-shadow: inset 0px 0px 1vw 1vw rgba(147, 86, 220, 0.267);
 }
 .desktop_logo_loader_wrapper .desktop_logo_loader_text_and_icon {
   animation: loader_text_and_icon 5s infinite linear;
@@ -416,6 +404,15 @@ hr, button {
   font-family: "Shrikhand", sans-serif;
   padding: 0 1rem;
   font-size: 2.7rem;
+}
+
+.desktop_logo_loader_container,
+.desktop_logo_loader_center_in {
+  transition: transform 0.5s cubic-bezier(0.2, 0.5, 0.3, 2);
+}
+.desktop_logo_loader_container:hover,
+.desktop_logo_loader_center_in:hover {
+  transform: scale(1.3);
 }
 
 /*=======================================================================================*/
@@ -961,6 +958,9 @@ main .restaurants_home_cards .restaurant_home_card .new_label {
   0% {
     opacity: 0;
   }
+  10% {
+    opacity: 20%;
+  }
   100% {
     opacity: 100%;
   }
@@ -969,18 +969,18 @@ main .restaurants_home_cards .restaurant_home_card .new_label {
 /*=======================================================================================*/
 /*======================================= Header =======================================*/
 /*=====================================================================================*/
-.header_restaurants_menu {
+.header_mob_tab_restaurants_menu {
   box-shadow: none;
 }
 
-.logo_container_home_link {
+.mob_tab_logo_container_home_link {
   position: absolute;
   left: 22px;
   font-size: 1.3rem;
   font-weight: 700;
   color: #353535;
 }
-.logo_container_home_link:hover {
+.mob_tab_logo_container_home_link:hover {
   color: #9356DC;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
   -webkit-background-clip: text;
@@ -1053,10 +1053,27 @@ main .restaurants_home_cards .restaurant_home_card .new_label {
 /*==================================DESKTOP==================================*/
 /*===========================================================================*/
 @media only screen and (min-width: 992px) {
+  .loader_wrapper {
+    animation: loading_spinner 3s forwards;
+  }
+  @keyframes loading_spinner {
+    0% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
   .mob_tab_header {
     display: none;
   }
   .top_mob_tab {
+    display: none;
+  }
+  .header_mob_tab_restaurants_menu {
     display: none;
   }
   main .book_menu {
@@ -1099,6 +1116,20 @@ main .restaurants_home_cards .restaurant_home_card .new_label {
 /*================================== MOB / TAB ==============================*/
 /*=========================================================================*/
 @media only screen and (max-width: 991px) {
+  .loader_wrapper {
+    animation: loading_spinner 3s forwards;
+  }
+  @keyframes loading_spinner {
+    0% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
   .desktop_header {
     display: none;
   }
@@ -1170,7 +1201,7 @@ header .desktop_logo_container {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 200px;
+  height: 220px;
 }
 
 footer {
