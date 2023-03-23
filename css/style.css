@@ -969,7 +969,7 @@ main .restaurants_home_cards .restaurant_home_card .new_label {
 /*=======================================================================================*/
 /*======================================= Header =======================================*/
 /*=====================================================================================*/
-.header_mob_tab_restaurants_menu {
+.header_restaurants_menu {
   box-shadow: none;
 }
 
@@ -1003,13 +1003,12 @@ main .restaurants_home_cards .restaurant_home_card .new_label {
 /*=======================================================================================*/
 /*======================================= Main =========================================*/
 /*=====================================================================================*/
-.menu_restaurants_name {
+.menu_restaurants_name_container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100px;
-  padding: 0 0.8rem;
   transform: translateY(-40px);
   background: #F7F7F7;
   border-radius: 40px 40px 0 0;
@@ -1017,25 +1016,37 @@ main .restaurants_home_cards .restaurant_home_card .new_label {
   top: 103px;
   z-index: 3;
 }
-.menu_restaurants_name_text {
-  width: 80%;
-  font-family: "Shrikhand", sans-serif;
-  font-size: 1.8rem;
-}
-.menu_restaurants_name_heart_icon {
+.menu_restaurants_name_container .menu_restaurants_name {
+  height: 100%;
+  width: clamp(375px, 70vw, 550px);
+  padding: 0 0.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20%;
+}
+.menu_restaurants_name_container .menu_restaurants_name_text {
+  width: 85%;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+.menu_restaurants_name_container .menu_restaurants_name_heart_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
   font-size: 1.5rem;
 }
-.menu_restaurants_name_heart_icon .fa-solid {
+.menu_restaurants_name_container .menu_restaurants_name_heart_icon .fa-solid {
   display: none;
 }
-.menu_restaurants_name_heart_icon:hover .fa-regular {
+.menu_restaurants_name_container .menu_restaurants_name_heart_icon:hover .fa-regular {
   display: none;
 }
-.menu_restaurants_name_heart_icon:hover .fa-solid {
+.menu_restaurants_name_container .menu_restaurants_name_heart_icon:hover .fa-solid {
   display: inline-block; /*active le display*/
 }
 
@@ -1071,9 +1082,6 @@ main .restaurants_home_cards .restaurant_home_card .new_label {
     display: none;
   }
   .top_mob_tab {
-    display: none;
-  }
-  .header_mob_tab_restaurants_menu {
     display: none;
   }
   main .book_menu {
@@ -1116,20 +1124,6 @@ main .restaurants_home_cards .restaurant_home_card .new_label {
 /*================================== MOB / TAB ==============================*/
 /*=========================================================================*/
 @media only screen and (max-width: 991px) {
-  .loader_wrapper {
-    animation: loading_spinner 3s forwards;
-  }
-  @keyframes loading_spinner {
-    0% {
-      opacity: 1;
-    }
-    70% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
   .desktop_header {
     display: none;
   }

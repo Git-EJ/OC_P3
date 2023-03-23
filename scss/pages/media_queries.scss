@@ -16,10 +16,6 @@
     .top_mob_tab{
         display:none;
     }
-
-    .header_mob_tab_restaurants_menu{
-        display:none;
-    }
     
     main{
 
@@ -71,10 +67,6 @@
 
 @media only screen and (max-width : 991px) {
     
-    .loader_wrapper{
-        @include home_loading_spinner_timeout;
-    }
-
     .desktop_header{
         display:none;
     }
