@@ -1,4 +1,6 @@
 
+/*========================================== MOBILE / TAB ==========================================*/
+
 .loader_wrapper{
     @include home_loading_spinner;
     @include flex_center;
@@ -11,7 +13,7 @@
     left:0;
     z-index:1;
 
-    .container{
+    .loader_container{
         @include flex_center;
         width:100%;
         height:auto;
@@ -20,7 +22,7 @@
     }
 
 
-    .center_out{
+    .loader_center_out{
         @include flex_center;
         @include loader_animation_center;
         position:relative;
@@ -33,7 +35,7 @@
                     0.5vw 0.5vw 0.5vw 0.5vw rgba($primary_color, 0.705);
     }
 
-    .center_in{
+    .loader_center_in{
         @include flex_center;
         position:absolute;
         width:70vw;
@@ -45,11 +47,11 @@
     }
 
 
-    .text_and_icon{
+    .loader_text_and_icon{
         @include loader_text_and_icon;
 
         .fa-utensils,
-        .text{
+        .loader_text{
             @include flex_center_column;
             @include loader_animation_text;
             width:100%;
@@ -60,7 +62,7 @@
             color: transparent;
         }
 
-        .text{
+        .loader_text{
             font-family: $font_logo;
             padding:0 1rem;
         } 
@@ -68,10 +70,13 @@
 }
 
 
-.desktop_loader_wrapper{
+/*==========================================DESKTOP==========================================*/
+
+
+.desktop_logo_loader_wrapper{
     @include flex_center;
 
-    .container{
+    .desktop_logo_loader_container{
         @include flex_center;
         width:100%;
         height:auto;
@@ -79,49 +84,50 @@
     }
 
 
-    .center_out{
+    .desktop_logo_loader_center_out{
         @include flex_center;
         @include loader_animation_center;
         position:relative;
-        width:10vw;
-        height:10vw;
-        max-width: 100px;
-        max-height: 100px;
+        width:120px;
+        height:120px;
         border-radius:50%;
         box-shadow: 0.3vw 0.3vw 0.1vw rgba($secondary_color, 0.705), // X  Y  blur-radius/rayon de flou  spread-radius/rayon étalement
                     0.3vw 0.3vw 0.1vw 0.1vw rgba($primary_color, 0.705);
     }
 
-    .center_in{
+    .desktop_logo_loader_center_in{
         @include flex_center;
         position:absolute;
-        width:15vw;
-        height:15vw;
-        max-width: 150px;
-        max-height: 150px;
+        width:190px;
+        height:190px;
         border-radius:50%; 
-        box-shadow: inset 0px 0px 2vw 0.5vw rgba($primary_color, 0.267);
+        box-shadow: inset 0px 0px 2vw 2vw rgba($primary_color, 0.267);
     }
 
 
-    .text_and_icon{
+    .desktop_logo_loader_text_and_icon{
         @include loader_text_and_icon;
 
         .fa-utensils,
-        .text{
+        .desktop_logo_loader_text{
             @include flex_center_column;
             background:$primary_color;
             width:100%;
             height:auto;
-            font-size: clamp(2rem, 2vw, 3rem);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
 
-        .text{
+        .fa-utensils{
+            font-size: 2.2rem;
+        }
+
+
+        .desktop_logo_loader_text{
             font-family: $font_logo;
-            padding:0 1rem;
+            padding:0 1rem; //without d and 0  are cut
+            font-size:2.7rem;
         } 
     }
 }

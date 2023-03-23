@@ -1,11 +1,14 @@
-@mixin mob_tab_header_component {
+@mixin general_header{
     background: $header_bg;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0px;
     z-index: 2;
-    
-    .logo_container {
+}
+
+@mixin mob_tab_header_component {
+
+    .mob_tab_logo_container {
         @include flex_center;
         width: 100%;
         height: $header_height;
@@ -20,21 +23,17 @@
                 transform: scale(1.2);
             }
         }
-    
-    
     }
 }
 
+
 @mixin desktop_header_component {
-    background: $header_bg;
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0px;
-    z-index: 2;
+    background: $light_bg_color;
+    box-shadow: none;
     
     .desktop_logo_container {
         @include flex_center;
         width: 100%;
-        height: 170px;
+        height: 200px;
     }
 }

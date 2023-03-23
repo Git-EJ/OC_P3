@@ -48,6 +48,7 @@ body {
 }
 
 header{
+    @include general_header;
     @include mob_tab_header_component;
     @include desktop_header_component;
 }

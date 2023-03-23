@@ -224,6 +224,7 @@ hr, button {
   }
 }
 
+/*========================================== MOBILE / TAB ==========================================*/
 .loader_wrapper {
   animation: loading_spinner 3s forwards;
   display: flex;
@@ -247,7 +248,7 @@ hr, button {
     opacity: 0;
   }
 }
-.loader_wrapper .container {
+.loader_wrapper .loader_container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -255,7 +256,7 @@ hr, button {
   height: auto;
   margin: 0.8rem;
 }
-.loader_wrapper .center_out {
+.loader_wrapper .loader_center_out {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -276,7 +277,7 @@ hr, button {
     transform: rotateZ(360deg);
   }
 }
-.loader_wrapper .center_in {
+.loader_wrapper .loader_center_in {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -288,7 +289,7 @@ hr, button {
   border-radius: 50%;
   box-shadow: inset 0px 0px 5vw 2.5vw rgba(147, 86, 220, 0.267);
 }
-.loader_wrapper .text_and_icon {
+.loader_wrapper .loader_text_and_icon {
   animation: loader_text_and_icon 5s infinite linear;
 }
 @keyframes loader_text_and_icon {
@@ -305,8 +306,8 @@ hr, button {
     transform: rotateZ(0deg);
   }
 }
-.loader_wrapper .text_and_icon .fa-utensils,
-.loader_wrapper .text_and_icon .text {
+.loader_wrapper .loader_text_and_icon .fa-utensils,
+.loader_wrapper .loader_text_and_icon .loader_text {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -330,17 +331,18 @@ hr, button {
     background-position: 0 100%;
   }
 }
-.loader_wrapper .text_and_icon .text {
+.loader_wrapper .loader_text_and_icon .loader_text {
   font-family: "Shrikhand", sans-serif;
   padding: 0 1rem;
 }
 
-.desktop_loader_wrapper {
+/*==========================================DESKTOP==========================================*/
+.desktop_logo_loader_wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.desktop_loader_wrapper .container {
+.desktop_logo_loader_wrapper .desktop_logo_loader_container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -348,16 +350,14 @@ hr, button {
   height: auto;
   margin: 0.8rem;
 }
-.desktop_loader_wrapper .center_out {
+.desktop_logo_loader_wrapper .desktop_logo_loader_center_out {
   display: flex;
   justify-content: center;
   align-items: center;
   animation: loader_center 3s infinite linear;
   position: relative;
-  width: 10vw;
-  height: 10vw;
-  max-width: 100px;
-  max-height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   box-shadow: 0.3vw 0.3vw 0.1vw rgba(255, 121, 218, 0.705), 0.3vw 0.3vw 0.1vw 0.1vw rgba(147, 86, 220, 0.705);
 }
@@ -369,19 +369,17 @@ hr, button {
     transform: rotateZ(360deg);
   }
 }
-.desktop_loader_wrapper .center_in {
+.desktop_logo_loader_wrapper .desktop_logo_loader_center_in {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  width: 15vw;
-  height: 15vw;
-  max-width: 150px;
-  max-height: 150px;
+  width: 190px;
+  height: 190px;
   border-radius: 50%;
-  box-shadow: inset 0px 0px 2vw 0.5vw rgba(147, 86, 220, 0.267);
+  box-shadow: inset 0px 0px 2vw 2vw rgba(147, 86, 220, 0.267);
 }
-.desktop_loader_wrapper .text_and_icon {
+.desktop_logo_loader_wrapper .desktop_logo_loader_text_and_icon {
   animation: loader_text_and_icon 5s infinite linear;
 }
 @keyframes loader_text_and_icon {
@@ -398,8 +396,8 @@ hr, button {
     transform: rotateZ(0deg);
   }
 }
-.desktop_loader_wrapper .text_and_icon .fa-utensils,
-.desktop_loader_wrapper .text_and_icon .text {
+.desktop_logo_loader_wrapper .desktop_logo_loader_text_and_icon .fa-utensils,
+.desktop_logo_loader_wrapper .desktop_logo_loader_text_and_icon .desktop_logo_loader_text {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -407,14 +405,17 @@ hr, button {
   background: #9356DC;
   width: 100%;
   height: auto;
-  font-size: clamp(2rem, 2vw, 3rem);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
-.desktop_loader_wrapper .text_and_icon .text {
+.desktop_logo_loader_wrapper .desktop_logo_loader_text_and_icon .fa-utensils {
+  font-size: 2.2rem;
+}
+.desktop_logo_loader_wrapper .desktop_logo_loader_text_and_icon .desktop_logo_loader_text {
   font-family: "Shrikhand", sans-serif;
   padding: 0 1rem;
+  font-size: 2.7rem;
 }
 
 /*=======================================================================================*/
@@ -1094,22 +1095,11 @@ main .restaurants_home_cards .restaurant_home_card .new_label {
     width: clamp(250px, 29vw, 400px);
   }
 }
-/*==========================================================================*/
-/*==================================TAB=====================================*/
-/*==========================================================================*/
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+/*=========================================================================*/
+/*================================== MOB / TAB ==============================*/
+/*=========================================================================*/
+@media only screen and (max-width: 991px) {
   .desktop_header {
-    display: none;
-  }
-  .top_desktop {
-    display: none;
-  }
-}
-/*=========================================================================*/
-/*==================================MOB====================================*/
-/*=========================================================================*/
-@media only screen and (max-width: 767px) {
-  header .desktop_header {
     display: none;
   }
   .top_desktop {
@@ -1152,25 +1142,22 @@ header {
   position: sticky;
   top: 0px;
   z-index: 2;
-  background: #fff;
-  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0px;
-  z-index: 2;
+  background: #F7F7F7;
+  box-shadow: none;
 }
-header .logo_container {
+header .mob_tab_logo_container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 63px;
 }
-header .logo_container_text {
+header .mob_tab_logo_container_text {
   font-family: "Shrikhand", sans-serif;
   font-size: 2rem;
   transition: transform 0.5s cubic-bezier(0.2, 0.5, 0.3, 2);
 }
-header .logo_container_text:hover {
+header .mob_tab_logo_container_text:hover {
   color: #9356DC;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
   -webkit-background-clip: text;
@@ -1183,7 +1170,7 @@ header .desktop_logo_container {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 170px;
+  height: 200px;
 }
 
 footer {
