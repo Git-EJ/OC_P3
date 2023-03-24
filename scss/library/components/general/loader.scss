@@ -116,6 +116,7 @@
                 -webkit-background-clip: text;
                 background-clip: text;
                 color: transparent;
+                transition: $hover_cubic_bezier;
             }
 
             .fa-utensils{
@@ -132,14 +133,21 @@
     }
 
 
-    .desktop_logo_loader_container,
-    .desktop_logo_loader_center_in{
+    .desktop_logo_loader_container{
         transition: $hover_cubic_bezier;
+        transform-origin: top;
 
         &:hover {
             transform:scale(1.3);
+
+        }
+        &:hover .fa-utensils,
+        &:hover .desktop_logo_loader_text{
+            transform:scale(1.25);
         }
     }
+    
+
 
 
 

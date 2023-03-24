@@ -19,13 +19,14 @@
     .dish_checkbox:checked~.card{
     
         .card_left{
-            width:67%;
+            width:calc(100% - ($menu_card_height + 30px));
         }
         
         .dish_choice_container{
             transform: translateX(-$menu_card_height);
             background: darken($tertiary_color, 10);
         }
+
         
         .fa-circle-check{
             @include card_checked;
@@ -56,7 +57,7 @@
             transform: scale(1.01);
             
             .card_left{
-                width:67%; 
+                width:calc(100% - ($menu_card_height + 30px))
             }
 
             .dish_choice_container{
@@ -74,7 +75,7 @@
         align-items: flex-start;
         justify-content: flex-start;
         gap: 0.3rem 0;
-        width:85%;
+        width:calc(100% - 30px);
         height: 100%;
         padding: 0.8rem 0 0.8rem 0.6rem;
         white-space: nowrap;
@@ -99,7 +100,7 @@
 
 
     .card_right_dish_price{
-        width:15%;
+        width:30px;
         height: 100%;
         display:flex;
         justify-content: flex-end;

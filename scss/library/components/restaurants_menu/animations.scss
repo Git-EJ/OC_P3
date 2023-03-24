@@ -21,7 +21,7 @@
 @mixin heart_animation_bg{
     background: linear-gradient($secondary_color 10%, $primary_color 30%, transparent 0%);
     background-size: 100% 300%;
-    animation: heart_animation_bg 1s linear forwards;
+    animation: heart_animation_bg 0.5s linear forwards;
 
     @keyframes heart_animation_bg{
 
