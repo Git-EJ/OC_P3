@@ -19,7 +19,7 @@
     .dish_checkbox:checked~.card{
     
         .card_left{
-            width:calc(100% - ($menu_card_height + 30px));
+            width:calc(100% - ($menu_card_height + 50px));
         }
         
         .dish_choice_container{
@@ -57,7 +57,7 @@
             transform: scale(1.01);
             
             .card_left{
-                width:calc(100% - ($menu_card_height + 30px))
+                width:calc(100% - ($menu_card_height + 50px));
             }
 
             .dish_choice_container{
@@ -100,7 +100,7 @@
 
 
     .card_right_dish_price{
-        width:30px;
+        width:50px;
         height: 100%;
         display:flex;
         justify-content: flex-end;

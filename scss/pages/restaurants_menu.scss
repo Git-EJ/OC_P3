@@ -25,7 +25,7 @@
 
 .menu_image{
     @include flex_center; //Remove the overflow of the image
-    aspect-ratio: 1 / 1;
+    height:261px;
     position:sticky;
     top: $header_height;
     width:99.7%; //remove the overflow of the image

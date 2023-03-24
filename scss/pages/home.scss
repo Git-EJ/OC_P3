@@ -4,6 +4,11 @@
     z-index:2;
 }
 
+.top_mob_tab,
+.top_desktop{
+    @include flex_center_column;
+}
+
 /*=======================================================================================*/
 /*======================================= Main =========================================*/
 /*=====================================================================================*/
@@ -15,6 +20,7 @@ main {
 
     .geoloc {
         @include flex_center;
+        width:100%;
         height: 50px;
         color: #353535;
         background: #EAEAEA;
@@ -34,6 +40,7 @@ main {
     .book_menu {
         @include flex_center_column;
         justify-content: flex-start;
+        width:100%;
         height: 288px;
         text-align: center;
         background: $light_bg_color;
@@ -41,12 +48,15 @@ main {
 
         h1 {
             @include section_tittle_font;
+            // font-size:clamp(1rem, 7vw, 1.5rem);
+            // font-weight: $font_bold;
             margin: 35px 4rem 0;
+            width:100%;
         }
 
         h2 {
             margin: 12px 0 32px 0;
-            font-size: 1.1rem;
+            font-size:clamp(0.8rem, 6vw, 1.1rem);
             font-weight: $font_light;
         }
 
@@ -60,73 +70,78 @@ main {
     .functioning {
         height: auto;
         margin: 3rem 1rem;
+        width:clamp(170px, 90vw, 400px);
         @include flex_center_column;
-    }
+   
     
-    .functioning_title {
-        @include flex_center;
-        @include section_tittle_font;
-        justify-content: flex-start;
-        width: 323px;
-    }
+        .functioning_title {
+            @include flex_center;
+            @include section_tittle_font;
+            justify-content: flex-start;
+            width:clamp(170px, 90vw, 400px);
+        }
 
-    .functioning_cards{  
-        width: 323px;
+        .functioning_cards{  
+            width:100%;
 
-        .functioning_card {
-            @include flex_center_row;
-            justify-content: space-around;
-            position: relative;
-            height: 73px;
-            width: 100%;
-            margin: 2rem 0 0 0rem;
-            font-weight: $font_half_bold;
-            background: $light_bg_color;
-            border-radius: 15px;
-            box-shadow: $box-shadow ;
+            .functioning_card {
+                @include flex_center_row;
+                justify-content: space-around;
+                position: relative;
+                height: 73px;
+                width: 100%;
+                margin: 2rem 0 0 0rem;
+                font-weight: $font_half_bold;
+                background: $light_bg_color;
+                border-radius: 15px;
+                box-shadow: $box-shadow ;
 
 
-            &_balls {
-                @include flex_center;
-                width: 24px;
-                height: 24px;
-                position: absolute;
-                left: -12px;
-                color: $balls_font_color ;
-                font-size: 0.9rem;
-                font-weight: 400;
-                background: $primary_color;
-                border-radius: 50%;
-            }
-
-            .fa-mobile-screen-button,
-            .fa-list,
-            .fa-store {
-                @include flex_center;
-                width: 73px;
-                margin-left: 12px;
-                /*(_balls=24px)/2 --> 12px*/
-                color: #7E7E7E;
-                font-size: 1.2rem;
-            }
-
-            &_text {
-                @include flex_center;
-                justify-content: flex-start;
-                width: 250px;
-            }
-
-            &:hover {
-                background: #f5edff;
+                &_balls {
+                    @include flex_center;
+                    width: 24px;
+                    height: 24px;
+                    position: absolute;
+                    left: -12px;
+                    color: $balls_font_color ;
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                    background: $primary_color;
+                    border-radius: 50%;
+                }
 
                 .fa-mobile-screen-button,
-                /*font awesome settings/technology --> Web Fonts*/
                 .fa-list,
                 .fa-store {
-                    @include linear_gradient_icons;
+                    @include flex_center;
+                    width: 20%;
+                    margin-left: 12px;
+                    /*(_balls=24px)/2 --> 12px*/
+                    color: #7E7E7E;
+                    font-size: clamp(0.9rem, 7vw, 1.2rem);
+                }
+
+                &_text {
+                    @include flex_center;
+                    justify-content: flex-start;
+                    width: 80%;
+                    font-size: clamp(0.5rem, 6vw, 1rem);
+                    
+                    
+                }
+
+                &:hover {
+                    background: #f5edff;
+
+                    .fa-mobile-screen-button,
+                    /*font awesome settings/technology --> Web Fonts*/
+                    .fa-list,
+                    .fa-store {
+                        @include linear_gradient_icons;
+                    }
                 }
             }
-        }
+        } 
     }
 
 
@@ -143,7 +158,7 @@ main {
     
     .restaurants_home_cards {
         @include flex_center_column;
-        width: clamp(335px, 70vw, 550px);
+        width: clamp(190px, 90vw, 550px);
         gap: 1.1rem 0;
         
         .restaurants_home_title {
@@ -199,12 +214,12 @@ main {
 
                     &_title {
                         padding-bottom: 0.1rem;
-                        font-size: 1.2rem;
+                        font-size: clamp(1.03rem, 7vw, 1.2rem);
                         font-weight: $font_bold;
                     }
 
                     &_location {
-                        font-size: 1.05rem;
+                        font-size: clamp(0.9rem, 7vw, 1.05rem);
                         font-weight: $font_light;
                     }
                 }
@@ -213,7 +228,7 @@ main {
                     @include flex_center;
                     @include heart_icon;
                     width: 20%;
-                    font-size: 1.5rem;
+                    font-size:clamp(1.2rem, 9vw, 1.5rem);
                 }
             }
 

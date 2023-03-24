@@ -1,4 +1,4 @@
 @mixin section_tittle_font {
-    font-size: 1.5rem;
+    font-size:clamp(1rem, 7vw, 1.5rem);
     font-weight: $font_bold;
 }
