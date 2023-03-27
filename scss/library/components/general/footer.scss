@@ -1,4 +1,3 @@
-
 @mixin footer_component {
     @include flex_center;
     width: 100%;
@@ -6,13 +5,13 @@
     padding: 0 1.2rem;
     background: $footer_bg;
     color: $footer_font_color;
-    
 
-    .footer_container{
+
+    .footer_container {
         @include flex_center_column;
         align-items: flex-start;
         width: clamp(335px, 70vw, 550px);
-        margin:0;
+        margin: 0;
 
         .footer_title {
             @include flex_center_column;
@@ -22,7 +21,7 @@
             font-size: 1.2rem;
             transition: $hover_cubic_bezier;
 
-            &:hover{
+            &:hover {
                 @include linear_gradient_icons;
                 transform: scale(1.2);
             }

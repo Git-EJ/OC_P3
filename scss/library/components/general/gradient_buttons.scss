@@ -4,7 +4,7 @@
 }
 
 
-@mixin gradient_button{
+@mixin gradient_button {
     height: 50px;
     padding: 0 20px;
     font-size: 1.05rem;
@@ -14,10 +14,9 @@
     box-shadow: $box-shadow;
     z-index: 1; //without top cut by the .cards div
     transition: $hover_cubic_bezier;
-    
+
     &:hover {
         @include button_hover;
-        transform:scale(1.2);
+        transform: scale(1.2);
     }
 }
-

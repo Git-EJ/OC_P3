@@ -1,36 +1,59 @@
+/*===================== Home =====================*/
 
-/*===================== Home =====================*/ 
-
-@mixin home_loading_spinner_timeout{
+@mixin home_loading_spinner_timeout {
     animation: loading_spinner 1s forwards;
-    
-    @keyframes loading_spinner{
-        0%{opacity:1};
-        70%{opacity:1};
-        100%{opacity:0};
+
+    @keyframes loading_spinner {
+        0% {
+            opacity: 1
+        };
+
+        70% {
+            opacity: 1
+        };
+
+        100% {
+            opacity: 0
+        };
     }
 }
 
 
-@mixin home_pages_display_timeout{
+@mixin home_pages_display_timeout {
     animation: home_pages_display_timeout 1s backwards;
-    
-    @keyframes home_pages_display_timeout{
-        0%{opacity:0};
-        80%{opacity:0};
-        100%{ opacity:1 };  
+
+    @keyframes home_pages_display_timeout {
+        0% {
+            opacity: 0
+        };
+
+        80% {
+            opacity: 0
+        };
+
+        100% {
+            opacity: 1
+        };
     }
 }
 
 
-/*================== Restaurants_Menu ==================*/ 
+/*================== Restaurants_Menu ==================*/
 
-@mixin menu_pages_display_timeout{
+@mixin menu_pages_display_timeout {
     animation: menu_pages_display_timeout 2s;
 
-    @keyframes menu_pages_display_timeout{
-        0%{opacity:0};
-        10%{opacity:20%};
-        100%{opacity: 100%}
+    @keyframes menu_pages_display_timeout {
+        0% {
+            opacity: 0
+        };
+
+        10% {
+            opacity: 20%
+        };
+
+        100% {
+            opacity: 100%
+        };
     }
 }

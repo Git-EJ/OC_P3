@@ -11,66 +11,66 @@
     box-shadow: none; //annule le box-shadow de header
 }
 
-.mob_tab_logo_container_home_link{
+.mob_tab_logo_container_home_link {
     position: absolute;
     left: 22px;
-    font-size:1.3rem;
+    font-size: 1.3rem;
     font-weight: $font_bold;
-    color:#353535; 
+    color: #353535;
 
-        &:hover{
-            @include linear_gradient_icons;
-        }
+    &:hover {
+        @include linear_gradient_icons;
+    }
 }
 
-.menu_image{
+.menu_image {
     @include flex_center; //Remove the overflow of the image
-    height:261px;
-    position:sticky;
+    height: 261px;
+    position: sticky;
     top: $header_height;
-    width:99.7%; //remove the overflow of the image
-    object-fit: cover;  
+    width: 99.7%; //remove the overflow of the image
+    object-fit: cover;
 }
 
 /*=======================================================================================*/
 /*======================================= Main =========================================*/
 /*=====================================================================================*/
 
-.menu_restaurants_name_container{
+.menu_restaurants_name_container {
     @include flex_center;
-    width:100%;
+    width: 100%;
     height: 100px;
     transform: translateY($menu_restaurants_name_negative_radius_size);
     background: $light_bg_color;
-    border-radius:$menu_restaurants_name_radius_size $menu_restaurants_name_radius_size 0 0 ;
+    border-radius: $menu_restaurants_name_radius_size $menu_restaurants_name_radius_size 0 0;
     position: sticky;
     top: calc($header_height - $menu_restaurants_name_negative_radius_size);
     z-index: 3;
 
-    .menu_restaurants_name{
-        height:100%;
+    .menu_restaurants_name {
+        height: 100%;
         width: clamp(375px, 70vw, 550px);
-        padding:0 0.8rem;
+        padding: 0 0.8rem;
         @include flex_center;
 
-        &_text{
-            width:85%;
+        &_text {
+            width: 85%;
             font-family: $font_logo;
             font-size: clamp(1rem, 10vw, 1.8rem);
             @include flex_center;
             justify-content: flex-start;
         }
 
-        &_heart_icon{
+        &_heart_icon {
             @include flex_center;
             @include heart_icon;
-            width:15%; 
-            font-size:clamp(1.2rem, 9vw, 1.5rem);
+            width: 15%;
+            font-size: clamp(1.2rem, 9vw, 1.5rem);
         }
-    }      
+    }
 }
 
-.cancel_menu_restaurants_name_radius{
+.cancel_menu_restaurants_name_radius {
     background: $light_bg_color;
     width: 100%;
     height: $menu_restaurants_name_radius_size;
@@ -79,8 +79,3 @@
     top: calc($header_height + ($menu_restaurants_name_radius_size * 2));
     z-index: 2;
 }
-
-
-
-
-

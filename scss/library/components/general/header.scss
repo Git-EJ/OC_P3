@@ -1,4 +1,4 @@
-@mixin general_header{
+@mixin general_header {
     background: $header_bg;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
@@ -13,13 +13,13 @@
         @include flex_center;
         width: 100%;
         height: $header_height;
-        
-        &_text{
+
+        &_text {
             font-family: $font_logo;
             font-size: clamp(1.2rem, 10vw, 2rem);
             transition: $hover_cubic_bezier;
-            
-            &:hover{
+
+            &:hover {
                 @include linear_gradient_icons;
                 transform: scale(1.2);
             }

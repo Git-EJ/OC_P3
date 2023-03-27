@@ -11,7 +11,7 @@
 
 @import "./pages/animation_loading_pages.scss";
 @import "./library/components/restaurants_menu/animations.scss";
-@import "./library/components/restaurants_menu/animations_functions.scss";
+@import "./library/components/restaurants_menu/animation-function_card_appearance.scss";
 
 @import "./library/components/general/header.scss";
 @import "./library/components/general/heart_icons.scss";
@@ -27,7 +27,6 @@
 @import "./pages/media_queries.scss";
 
 
-
 html,
 body {
     font-family: 'Roboto', sans-serif;
@@ -39,15 +38,14 @@ body {
     }
 }
 
-
 .home_wrapper,
-.menu_wrapper{
+.menu_wrapper {
     margin: 0 auto;
     background: $wrapper_bg;
     width: 100%;
 }
 
-header{
+header {
     @include general_header;
     @include mob_tab_header_component;
     @include desktop_header_component;

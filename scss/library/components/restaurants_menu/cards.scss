@@ -1,39 +1,39 @@
 .cards {
-    width:100%;
-    height:auto;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
-    gap:1rem;
+    gap: 1rem;
 
 
-    .menu_card_label{
-        width:100%;
+    .menu_card_checkbox_label {
+        width: 100%;
         height: $menu_card_height;
     }
-    
 
-    .dish_checkbox{
-        display:none;
+
+    .dish_checkbox {
+        display: none;
     }
-    
-    .dish_checkbox:checked~.card{
-    
-        .card_left{
-            width:calc(100% - ($menu_card_height + 50px));
+
+    .dish_checkbox:checked~.card {
+
+        .card_description {
+            width: calc(100% - ($menu_card_height + 50px));
         }
-        
-        .dish_choice_container{
+
+        .dish_choice_container {
             transform: translateX(-$menu_card_height);
             background: darken($tertiary_color, 10);
         }
 
-        
-        .fa-circle-check{
+
+        .fa-circle-check {
             @include card_checked;
             @include linear_gradient_icons;
-            width:45px;
-            height:45px;
-            left:calc(($menu_card_height - 45px) / 2);
+            width: 45px;
+            height: 45px;
+            left: calc(($menu_card_height - 45px) / 2);
             transform: rotateZ(360deg);
         }
     }
@@ -41,8 +41,8 @@
 
     .card {
         @include flex_center;
-        position:relative;
-        align-items: flex-end;  
+        position: relative;
+        align-items: flex-end;
         justify-content: flex-start; //chgt pour la transition
         width: 100%;
         height: $menu_card_height;
@@ -51,58 +51,57 @@
         box-shadow: $box-shadow;
         overflow: hidden;
 
-        &:hover{
-            // box-shadow: $box-shadow_gradient;
+        &:hover {
             box-shadow: $box-shadow-hover;
             transform: scale(1.01);
-            
-            .card_left{
-                width:calc(100% - ($menu_card_height + 50px));
+
+            .card_description {
+                width: calc(100% - ($menu_card_height + 50px));
             }
 
-            .dish_choice_container{
+            .dish_choice_container {
                 transform: translateX(-$menu_card_height);
             }
 
-            .fa-circle-check{
+            .fa-circle-check {
                 transform: rotateZ(360deg);
             }
-        }   
+        }
     }
 
-    .card_left{
+    .card_description {
         @include flex_center_column;
         align-items: flex-start;
         justify-content: flex-start;
         gap: 0.3rem 0;
-        width:calc(100% - 30px);
+        width: calc(100% - 30px);
         height: 100%;
         padding: 0.8rem 0 0.8rem 0.6rem;
         white-space: nowrap;
         transition: width $menu_card_anim_duration $menu_card_anim_cubic_bezier; // si dans le &:hover pas de retour fluide
 
         &_top_dish_name {
-        width:100%;
-        font-size: clamp(0.8rem, 6vw, 1.1rem);
-        font-weight: $font_bold;
-        text-overflow: ellipsis;
-        overflow: hidden;
+            width: 100%;
+            font-size: clamp(0.8rem, 6vw, 1.1rem);
+            font-weight: $font_bold;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
 
-        &_bottom_side_dish{
-        width:100%;
-        font-size: clamp(0.6rem, 5vw, 0.85rem);
-        font-weight: $font_light;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        }   
-    }   
+        &_bottom_side_dish {
+            width: 100%;
+            font-size: clamp(0.6rem, 5vw, 0.85rem);
+            font-weight: $font_light;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
 
 
-    .card_right_dish_price{
-        width:50px;
+    .card_dish_price {
+        width: 50px;
         height: 100%;
-        display:flex;
+        display: flex;
         justify-content: flex-end;
         align-items: flex-end;
         padding: 0.8rem 1rem 0.8rem 0rem;
@@ -111,34 +110,36 @@
     }
 
 
-    .dish_choice_container{
+    .dish_choice_container {
         @include flex_center;
-        position:absolute;
-        width:100px;
-        height:$menu_card_height;
-        right:-100px;
+        position: absolute;
+        width: 100px;
+        height: $menu_card_height;
+        right: -100px;
         background: $tertiary_color;
-        transition: transform $menu_card_anim_duration $menu_card_anim_cubic_bezier; 
+        transition: transform $menu_card_anim_duration $menu_card_anim_cubic_bezier;
 
 
-        .fa-circle-check{
+        .fa-circle-check {
             @include flex_center;
             position: absolute;
-            width:31px;
-            height:31px;
-            left:calc(($menu_card_height - 31px) / 2);
-            font-size:1.9rem;
-            color:#fff;
+            width: 31px;
+            height: 31px;
+            left: calc(($menu_card_height - 31px) / 2);
+            font-size: 1.9rem;
+            color: #fff;
             transition: transform $menu_card_anim_duration;
             transition-delay: 0.2s;
         }
     }
-}  
+}
 
-.menu section .cards{  //entrée + plats
-        margin: 0 0 2rem 0;
-    }
+.menu section .cards {
+    //entrée + plats
+    margin: 0 0 2rem 0;
+}
 
-.menu section:last-of-type .cards { //dessert
+.menu section:last-of-type .cards {
+    //dessert
     margin: 0 0 3rem 0;
-  }
+}

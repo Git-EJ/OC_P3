@@ -4,53 +4,53 @@
 
 .menu {
     @include flex_center_column;
-    width:100%;
+    width: 100%;
     background-color: $light_bg_color;
 }
 
-.section_cards_container{
+.section_cards_container {
     @include flex_center_column;
     width: 100%;
-    margin-top:(calc($menu_restaurants_name_negative_radius_size * 2));
+    margin-top: (calc($menu_restaurants_name_negative_radius_size * 2));
     position: sticky;
     z-index: 1;
     background: $light_bg_color;
 }
 
-.section_menu{
+.section_menu {
     @include flex_center_column;
     align-items: flex-start;
     width: clamp(190px, 90vw, 550px);
-    padding:0 0.8rem;
+    padding: 0 0.8rem;
     background: $light_bg_color;
 
-    &:first-of-type{
+    &:first-of-type {
         margin-top: 0.4rem; //for anim title hover
     }
 
-    &_title{
+    &_title {
         font-size: clamp(0.8rem, 6vw, 1rem);
         font-weight: $font_light;
-        margin-bottom:0.2rem;
+        margin-bottom: 0.2rem;
 
-        &_underline{
-            width:40px;
-            margin-bottom: 1rem;;
-            border-top:2px solid $tertiary_color;
-            color: transparent; //if span --> don't need for hr
+        &_underline {
+            width: 40px;
+            margin-bottom: 1rem;
+            ;
+            border-top: 2px solid $tertiary_color;
+            color: transparent;
         }
 
-        &:hover{
+        &:hover {
             @include new_label_and_menu_title_shake;
             font-weight: 400;
-            // margin-top:0.3rem;
         }
     }
-}    
+}
 
-.order_button{
+.order_button {
     @include gradient_button;
     width: clamp(155px, 30vw, 400px);
     margin-bottom: 3rem;
-    padding:0 0.8rem;
+    padding: 0 0.8rem;
 }

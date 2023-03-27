@@ -10,7 +10,7 @@ $footer_font_color: #fff;
 $shadow_color: #000;
 
 
-$wrapper_bg:#fff;
+$wrapper_bg: #fff;
 $header_bg: #fff;
 $restaurant_card_text_bg: #fff;
 $menu_card_bg: #fff;
@@ -19,10 +19,10 @@ $footer_bg: #353535;
 
 
 $button_bg_gradient: linear-gradient(170deg, $secondary_color, $primary_color);
-$button_bg_gradient_hover: linear-gradient(170deg, lighten($secondary_color, 5%), lighten($primary_color,5%));
+$button_bg_gradient_hover: linear-gradient(170deg, lighten($secondary_color, 5%), lighten($primary_color, 5%));
 
 $box-shadow: 2px 7px 7px rgba($shadow_color, 0.08);
-$box-shadow_hover: 2px 7px 7px  rgba($shadow_color, 0.18);
+$box-shadow_hover: 2px 7px 7px rgba($shadow_color, 0.18);
 $box-shadow_gradient: 0 0 14px rgba($secondary_color, 0.705), 7px 7px 7px rgba($primary_color, 0.267);
 
 
@@ -37,8 +37,8 @@ $header_height: 63px;
 $menu_restaurants_name_radius_size: 40px;
 $menu_restaurants_name_negative_radius_size: calc(-1 * $menu_restaurants_name_radius_size);
 
-$menu_card_height:70px;
-$menu_card_anim_duration:1.5s;
-$menu_card_anim_cubic_bezier:cubic-bezier(0.2, 0.5, 0.3, 1.5);
+$menu_card_height: 70px;
+$menu_card_anim_duration: 1.5s;
+$menu_card_anim_cubic_bezier: cubic-bezier(0.2, 0.5, 0.3, 1.5);
 
 $hover_cubic_bezier: transform 0.5s cubic-bezier(0.2, 0.5, 0.3, 2);

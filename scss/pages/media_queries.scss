@@ -1,23 +1,22 @@
-
 /*===========================================================================*/
 /*==================================DESKTOP==================================*/
 /*===========================================================================*/
 
 @media only screen and (min-width: 992px) {
 
-    .loader_wrapper{
+    .loader_wrapper {
         @include home_loading_spinner_timeout;
     }
 
-    .mob_tab_header{
-        display:none;
+    .mob_tab_header {
+        display: none;
     }
 
-    .top_mob_tab{
-        display:none;
+    .top_mob_tab {
+        display: none;
     }
-    
-    main{
+
+    main {
 
         .book_menu {
             height: auto;
@@ -43,9 +42,9 @@
             margin-bottom: 1rem;
         }
 
-        .functioning_cards{
-            margin:0 1rem;
-            gap:0 2rem;
+        .functioning_cards {
+            margin: 0 1rem;
+            gap: 0 2rem;
         }
     }
 }
@@ -56,12 +55,12 @@
 /*=========================================================================*/
 
 @media only screen and (max-width : 991px) {
-    
-    .desktop_header{
-        display:none;
+
+    .desktop_header {
+        display: none;
     }
 
-    .top_desktop{
-        display:none;
+    .top_desktop {
+        display: none;
     }
 }
