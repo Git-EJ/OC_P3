@@ -1,7 +1,7 @@
 /*===================== Home =====================*/
 
 @mixin home_loading_spinner_timeout {
-    animation: loading_spinner 1s forwards;
+    animation: loading_spinner 3s forwards;
 
     @keyframes loading_spinner {
         0% {
@@ -20,7 +20,7 @@
 
 
 @mixin home_pages_display_timeout {
-    animation: home_pages_display_timeout 1s backwards;
+    animation: home_pages_display_timeout 3s backwards;
 
     @keyframes home_pages_display_timeout {
         0% {

@@ -704,7 +704,7 @@ button {
 }
 
 .home_wrapper {
-  animation: home_pages_display_timeout 1s backwards;
+  animation: home_pages_display_timeout 3s backwards;
   position: relative;
   z-index: 2;
 }
@@ -1120,7 +1120,7 @@ main .restaurants_home_cards .restaurant_home_card .new_label {
 /*===========================================================================*/
 @media only screen and (min-width: 992px) {
   .loader_wrapper {
-    animation: loading_spinner 1s forwards;
+    animation: loading_spinner 3s forwards;
   }
   @keyframes loading_spinner {
     0% {
