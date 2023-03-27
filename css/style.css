@@ -448,7 +448,7 @@ hr, button {
   align-items: center;
   flex-direction: column;
   align-items: flex-start;
-  width: clamp(375px, 70vw, 550px);
+  width: clamp(190px, 90vw, 550px);
   padding: 0 0.8rem;
   background: #F7F7F7;
 }
@@ -456,6 +456,7 @@ hr, button {
   margin-top: 0.4rem;
 }
 .section_menu_title {
+  font-size: clamp(0.8rem, 6vw, 1rem);
   font-weight: 300;
   margin-bottom: 0.2rem;
 }
@@ -503,7 +504,7 @@ hr, button {
   box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.08);
   z-index: 1;
   transition: transform 0.5s cubic-bezier(0.2, 0.5, 0.3, 2);
-  width: clamp(185px, 30vw, 400px);
+  width: clamp(155px, 30vw, 400px);
   margin-bottom: 3rem;
   padding: 0 0.8rem;
 }
@@ -611,14 +612,14 @@ hr, button {
 }
 .cards .card_left_top_dish_name {
   width: 100%;
-  font-size: 1.1rem;
+  font-size: clamp(0.8rem, 6vw, 1.1rem);
   font-weight: 700;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 .cards .card_left_bottom_side_dish {
   width: 100%;
-  font-size: 0.85rem;
+  font-size: clamp(0.6rem, 5vw, 0.85rem);
   font-weight: 300;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -631,6 +632,7 @@ hr, button {
   align-items: flex-end;
   padding: 0.8rem 1rem 0.8rem 0rem;
   font-weight: 700;
+  font-size: clamp(0.8rem, 6vw, 1rem);
 }
 .cards .dish_choice_container {
   display: flex;
@@ -1042,7 +1044,7 @@ main .restaurants_home_cards .restaurant_home_card .new_label {
 .menu_restaurants_name_container .menu_restaurants_name_text {
   width: 85%;
   font-family: "Shrikhand", sans-serif;
-  font-size: 1.8rem;
+  font-size: clamp(1rem, 10vw, 1.8rem);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1053,7 +1055,7 @@ main .restaurants_home_cards .restaurant_home_card .new_label {
   justify-content: center;
   align-items: center;
   width: 15%;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 9vw, 1.5rem);
 }
 .menu_restaurants_name_container .menu_restaurants_name_heart_icon .fa-solid {
   display: none;
@@ -1169,7 +1171,7 @@ header .mob_tab_logo_container {
 }
 header .mob_tab_logo_container_text {
   font-family: "Shrikhand", sans-serif;
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 10vw, 2rem);
   transition: transform 0.5s cubic-bezier(0.2, 0.5, 0.3, 2);
 }
 header .mob_tab_logo_container_text:hover {
@@ -1237,7 +1239,7 @@ footer .footer_container .footer_text {
   gap: 0.5rem 0;
 }
 footer .footer_container .footer_text_line {
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 6vw, 0.9rem);
 }
 footer .footer_container .footer_text .fa-solid {
   width: 20px;

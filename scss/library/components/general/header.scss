@@ -16,7 +16,7 @@
         
         &_text{
             font-family: $font_logo;
-            font-size: 2rem;
+            font-size: clamp(1.2rem, 10vw, 2rem);
             transition: $hover_cubic_bezier;
             
             &:hover{

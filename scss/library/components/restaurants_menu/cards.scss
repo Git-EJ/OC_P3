@@ -34,7 +34,7 @@
             width:45px;
             height:45px;
             left:calc(($menu_card_height - 45px) / 2);
-            transform: rotateZ(360deg) ;
+            transform: rotateZ(360deg);
         }
     }
 
@@ -83,7 +83,7 @@
 
         &_top_dish_name {
         width:100%;
-        font-size: 1.1rem;
+        font-size: clamp(0.8rem, 6vw, 1.1rem);
         font-weight: $font_bold;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -91,7 +91,7 @@
 
         &_bottom_side_dish{
         width:100%;
-        font-size:0.85rem;
+        font-size: clamp(0.6rem, 5vw, 0.85rem);
         font-weight: $font_light;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -107,6 +107,7 @@
         align-items: flex-end;
         padding: 0.8rem 1rem 0.8rem 0rem;
         font-weight: $font_bold;
+        font-size: clamp(0.8rem, 6vw, 1rem)
     }
 
 

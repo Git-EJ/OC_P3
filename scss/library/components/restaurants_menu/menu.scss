@@ -20,18 +20,19 @@
 .section_menu{
     @include flex_center_column;
     align-items: flex-start;
-    width: clamp(375px, 70vw, 550px);
+    width: clamp(190px, 90vw, 550px);
     padding:0 0.8rem;
     background: $light_bg_color;
-                
+
     &:first-of-type{
         margin-top: 0.4rem; //for anim title hover
     }
 
     &_title{
+        font-size: clamp(0.8rem, 6vw, 1rem);
         font-weight: $font_light;
         margin-bottom:0.2rem;
-    
+
         &_underline{
             width:40px;
             margin-bottom: 1rem;;
@@ -49,7 +50,7 @@
 
 .order_button{
     @include gradient_button;
-    width: clamp(185px, 30vw, 400px);
+    width: clamp(155px, 30vw, 400px);
     margin-bottom: 3rem;
     padding:0 0.8rem;
 }
