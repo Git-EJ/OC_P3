@@ -171,11 +171,6 @@ main {
             position: relative;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: $box-shadow ;
-
-            &:hover {
-                box-shadow: $box-shadow_hover;
-            }
 
             &_image_container {
                 width: 100%;
@@ -241,5 +236,16 @@ main {
                 background: $tertiary_color;
             }
         }
+    }
+}
+
+
+//cancel the box shadow under the image and keep the hover effect on the all card area
+
+.restaurant_home_card:not(.restaurant_home_card_image_container .image){  
+    box-shadow: $box-shadow ;  
+
+    &:hover:not(.restaurant_home_card_image_container .image) {
+        box-shadow: $box-shadow_hover;
     }
 }

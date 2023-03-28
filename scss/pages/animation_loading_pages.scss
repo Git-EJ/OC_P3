@@ -1,6 +1,6 @@
 /*===================== Home =====================*/
 
-@mixin home_loading_spinner_timeout {
+@mixin home_loading_spinner_timeout {   //loading spinner display delays
     animation: loading_spinner 3s forwards;
 
     @keyframes loading_spinner {
@@ -19,7 +19,7 @@
 }
 
 
-@mixin home_pages_display_timeout {
+@mixin home_pages_display_timeout { //time before home page appears
     animation: home_pages_display_timeout 3s backwards;
 
     @keyframes home_pages_display_timeout {
@@ -40,7 +40,7 @@
 
 /*================== Restaurants_Menu ==================*/
 
-@mixin menu_pages_display_timeout {
+@mixin menu_pages_display_timeout { //time before menu pages appears
     animation: menu_pages_display_timeout 2s;
 
     @keyframes menu_pages_display_timeout {

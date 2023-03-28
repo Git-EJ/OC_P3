@@ -19,14 +19,14 @@
 
 
 @mixin heart_animation_bg { //animation for heart favorites restaurants progressive filling bg
-    background: linear-gradient($secondary_color 10%, $primary_color 30%, transparent 0%);
-    background-size: 100% 300%;
+    background: linear-gradient($secondary_color 10%, $primary_color 30%, transparent 0%);  // % used to define the positions of colors at the start of the animation. (without transparent when :hover bg is $primary)
+    background-size: 100% 300%; // H V  
     animation: heart_animation_bg 0.5s linear forwards;
 
     @keyframes heart_animation_bg {
 
         0% {
-            background-position: 0 -50%; //position du dégradé H V
+            background-position: 0 -50%; //gradient position H V. The initial position is relative to the position layer defined by bg-position
         }
 
         100% {
@@ -183,17 +183,15 @@
 }
 
 
-@mixin loader_animation_text {
-    // background: linear-gradient($secondary_color 0%, $primary_color 20%, transparent 100%);
-    background: linear-gradient($secondary_color 0%, $primary_color 20%);
-    background-size: 100% 200%;
-    background-position: 0 -100%; //position du dégradé H V
+@mixin loader_animation_text { //effect of appearing text coloring in the form of back and forth
+    background: linear-gradient($secondary_color 0%, $primary_color 20%); // % used to define the positions of colors at the start of the animation (bg is $primary); 
+    background-size: 100% 200%; 
     animation: loader_text 1.5s infinite linear;
 
     @keyframes loader_text {
 
         0% {
-            background-position: 0 -100%;
+            background-position: 0 -100%; // H V  The initial position is relative to the position layer defined by bg-position
         }
 
         100% {

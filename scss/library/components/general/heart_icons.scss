@@ -1,9 +1,9 @@
 @mixin heart_bg {
     @include heart_animation_bg;
-    color: $primary_color;
-    -webkit-background-clip: text;
+    color: $primary_color;    
+    -webkit-background-clip: text; //allows to put a background on the icons
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; //make the icon transparent to show the bg behind
 }
 
 

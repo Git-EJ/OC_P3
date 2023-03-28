@@ -338,7 +338,6 @@ button {
   flex-direction: column;
   background: linear-gradient(#FF79DA 0%, #9356DC 20%);
   background-size: 100% 200%;
-  background-position: 0 -100%;
   animation: loader_text 1.5s infinite linear;
   width: 100%;
   height: auto;
@@ -578,10 +577,10 @@ button {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  transform: rotateZ(360deg);
   width: 45px;
   height: 45px;
   left: 12.5px;
-  transform: rotateZ(360deg);
 }
 @keyframes card_checked {
   0% {
@@ -907,10 +906,6 @@ main .restaurants_home_cards .restaurant_home_card {
   position: relative;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.08);
-}
-main .restaurants_home_cards .restaurant_home_card:hover {
-  box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.18);
 }
 main .restaurants_home_cards .restaurant_home_card_image_container {
   width: 100%;
@@ -1004,6 +999,13 @@ main .restaurants_home_cards .restaurant_home_card .new_label {
   100% {
     transform: translateY(0) rotate(0);
   }
+}
+
+.restaurant_home_card:not(.restaurant_home_card_image_container .image) {
+  box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.08);
+}
+.restaurant_home_card:not(.restaurant_home_card_image_container .image):hover:not(.restaurant_home_card_image_container .image) {
+  box-shadow: 2px 7px 7px rgba(0, 0, 0, 0.18);
 }
 
 .menu_wrapper {

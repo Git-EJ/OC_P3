@@ -1,7 +1,7 @@
-@mixin linear_gradient_icons {
+@mixin linear_gradient_icons { //allows to put a background on the icons
     color: $primary_color;
     background: $gradient_color;
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; //make the icon transparent to show the bg behind
 }

@@ -19,11 +19,11 @@
     .dish_checkbox:checked~.card {
 
         .card_description {
-            width: calc(100% - ($menu_card_height + 50px));
+            width: calc(100% - ($menu_card_height + $card_dish_price_width));
         }
 
         .dish_choice_container {
-            transform: translateX(-$menu_card_height);
+            transform: translateX(-$menu_card_height); //like that the container is a square: 70px=$menu_card_height --> width=70px height=70px
             background: darken($tertiary_color, 10);
         }
 
@@ -31,10 +31,10 @@
         .fa-circle-check {
             @include card_checked;
             @include linear_gradient_icons;
+            transform: rotateZ(360deg);
             width: 45px;
             height: 45px;
-            left: calc(($menu_card_height - 45px) / 2);
-            transform: rotateZ(360deg);
+            left: calc(($menu_card_height - 45px) / 2); //the icon have a center position: menu_card_height = dish_container_width = 70px --> (70px - icon_width) = remaining space in the container --> /2 = icon centered
         }
     }
 
@@ -56,7 +56,7 @@
             transform: scale(1.01);
 
             .card_description {
-                width: calc(100% - ($menu_card_height + 50px));
+                width: calc(100% - ($menu_card_height + $card_dish_price_width));
             }
 
             .dish_choice_container {
@@ -78,7 +78,7 @@
         height: 100%;
         padding: 0.8rem 0 0.8rem 0.6rem;
         white-space: nowrap;
-        transition: width $menu_card_anim_duration $menu_card_anim_cubic_bezier; // si dans le &:hover pas de retour fluide
+        transition: width $menu_card_anim_duration $menu_card_anim_cubic_bezier;
 
         &_top_dish_name {
             width: 100%;
@@ -99,7 +99,7 @@
 
 
     .card_dish_price {
-        width: 50px;
+        width: $card_dish_price_width;
         height: 100%;
         display: flex;
         justify-content: flex-end;
