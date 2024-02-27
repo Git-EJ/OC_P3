@@ -7,7 +7,7 @@ https://git-ej.github.io/OC_P3/
 
 <div align='center'>
 
- <img src="./img/logo/logo.png" alt="ohMyFood logo" title="ohMyFood logo" width="150" height="auto"/>
+ <img src="./img/logo/logo.png" alt="ohMyFood logo" title="ohMyFood logo" width="175" height="auto"/>
  
 </div><br>
 
