@@ -27,3 +27,16 @@ https://git-ej.github.io/OC_P3/
 <strong>Project goal:</strong>  Implement relevant css animations.
 
 <strong>Personal addition:</strong> Logo, and loading spinner.
+
+
+<strong>Install dependencies:</strong>
+
+```
+npm i
+```
+
+<strong>run sass</strong>
+
+```
+npm run sass
+```
