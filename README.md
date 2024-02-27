@@ -1,8 +1,3 @@
-# OC_P3
-
-https://git-ej.github.io/OC_P3/
-
-
 <h1>OC_P3</h1>
 
 <div align='center'>
