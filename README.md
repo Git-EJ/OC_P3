@@ -24,6 +24,6 @@ https://git-ej.github.io/OC_P3/
 
 <strong>Project:</strong> From scratch, mobile first. 
 
-<strong>Project goal: Implement relevant css animations.</strong> 
+<strong>Project goal:</strong>  Implement relevant css animations.
 
 <strong>Personal addition:</strong> Logo, and loading spinner.
